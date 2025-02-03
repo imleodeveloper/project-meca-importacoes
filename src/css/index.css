@@ -1,0 +1,4671 @@
+* {
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/***************************** BODY E MAIN INICIO ************************************/
+body{    
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    background-color: rgb(25, 25, 25) !important;
+    position: relative;
+
+}
+
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    background: rgb(25,25,25);
+    background: linear-gradient(90deg, rgba(25,25,25,1) 0%, rgba(33,33,33,1) 47%, rgba(25,25,25,1) 81%);
+}
+/***************************** BODY E MAIN FIM ************************************/
+
+/***************************** HEADER E NAV INICIO ************************************/
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(41, 41, 41, 0.35);/*background-color: #292929;*/
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.8s ease;
+}
+.div-logo-nav{
+    width: 20%;
+    height: auto;
+    overflow: hidden;
+    
+}
+.navbar-logo{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.navbar-logo img{
+    width: 100%;
+
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.nav-list{
+    width: 60%;
+    list-style: none;
+    display: flex;
+    
+}
+.nav-item{
+    color: #fff;
+    transition: color 0.3s ease;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-left: 4rem;
+    position: relative;
+}
+.navbar .nav-list .nav-item:hover{
+    color: #0059ff;
+}
+
+.navbar .nav-list .nav-item::after{
+    content: " ";
+    width: 8px;
+    height: 2px;
+    background-color: #0059ff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease ;
+}
+
+.navbar .nav-list .nav-item:hover::after{
+    width: 65%;
+}
+/* Estilo inicial do dropdown escondido */
+.nav-dropdown{
+    position: relative;
+}
+.nav-dropdown .dropdown-menu{
+    position: absolute;
+    top: calc(100% + 41px);
+    left: -5px;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    background-color: rgba(41, 41, 41, 0.98);
+    box-shadow: none;
+    border: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 100;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding-bottom: 0;
+}
+.nav-dropdown:hover .dropdown-menu{
+    max-height: 200px;
+    padding: 10px 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ }
+.nav-dropdown span{
+    position: absolute;
+    width: 100%;
+    height: 41px;
+    left: 0px;
+    bottom: -41px;
+}
+
+
+.dropdown-item{
+    position: relative;
+    margin-bottom: 5px;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+.dropdown-item:hover{
+    background: none !important;
+    color: #0059ff !important;
+}
+.dropdown-item::after{
+    content: " ";
+    width: 5px;
+    height: 2px;
+    background-color: #0059ff;
+    position: absolute;
+    bottom: 0px;
+    left: 16px;
+    transition: width 0.6s ease ;
+}
+.dropdown-item:hover::after{
+    width: 40%;
+}
+
+/* mobile menu */
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s ease;
+}
+.mobile-menu.active .line1 {
+    transform: rotate(45deg) translate(-2px, 0px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(-45deg) translate(-1px, -0px);
+}
+
+/*MEDIA DO MENU CELULAR */
+@media (max-width: 1024px){
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        width: 100%;
+    }
+    .mobile-menu{
+        display: block;
+        z-index: 1;
+    }
+    .nav-list{
+        position: absolute;
+        top: 4.5vh;
+        right: 0;
+        background-color: rgba(41, 41, 41, 0.99);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list.active{
+        transform: translateX(0);
+    }
+    .nav-item{
+        margin: 0 auto;
+        opacity: 0;
+        text-align: left;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in, opacity 0.4s ease;
+    }
+    .nav-list.active .nav-item {
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+    .nav-list.active .nav-item:nth-child(1) {
+        transition-delay: 0.2s;
+    }
+    .nav-list.active .nav-item:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+    .nav-list.active .nav-item:nth-child(3) {
+        transition-delay: 0.4s;
+    }
+    .nav-list.active .nav-item:nth-child(4) {
+        transition-delay: 0.5s;
+    }
+
+
+    /* DROPDOWN MENU MOBILE */    
+     .nav-dropdown .dropdown-menu{
+        position: static;
+        align-items: flex-start;
+     }
+     .nav-dropdown:hover .dropdown-menu{
+        box-shadow: none;
+     }
+     .dropdown-item{
+        width: 100%;
+        margin-left: -20px;
+     }
+    /* DROPDOWN MENU MOBILE */
+
+}
+/* mobile menu */
+
+/***************************** HEADER E NAV FIM ************************************/
+
+
+/****************** PÁGINA HOME INICIO **************************/
+/* INÍCIO DO SLIDER HOME */
+.section-slider{
+    width: 100%;
+    height: auto;
+}
+.sliderHome{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 0 0 20px black;
+    
+}
+
+.positionSliderHome{
+    width: 100%;
+    height: 100vh;
+    background: rgb(12, 12, 12);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: relative;
+}
+.custom-swiper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.slideHome-item {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+    animation: zoom 8s ease-in-out infinite;
+    position: relative;
+}
+
+.slideHome-text{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+}
+.slider-button{
+    width: 25%;
+    height: auto;
+    position: relative;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    border: solid 1px #0059ff;
+    padding: 15px 50px;
+    color: #0059ff;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: 900;
+    z-index: 100;
+    animation: subirFrase 0.5s ease-out forwards;
+}
+
+
+.slider-button::before {
+    content: "";
+    position: absolute;
+    top: -200%; /* Fora da área visível */
+    left: -300%; /* Fora da área visível */
+    width: 300%; /* Cobre toda a área do botão */
+    height: 300%; /* Proporcional ao tamanho do botão */
+    background-color: #0059ff; /* Cor do efeito de fundo */
+    transform: rotate(-10deg); /* Garante o movimento diagonal */
+    z-index: -1; /* Fica atrás do texto do botão */
+    transition: top 0.4s ease-in, left 0.2s linear;
+}
+
+/* Apenas ativa o hover */
+.slider-button:hover::before {
+    top: 100%;
+    left: 0;
+}
+
+/* Remove a transição quando o mouse sai */
+.slider-button:not(:hover)::before {
+    transition: none;
+    top: -200%;
+    left: -300%;
+}
+
+.swiper-pagination{
+    padding-bottom: 75px;
+}
+.swiper-pagination-bullet{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: #7c7c7c !important;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 1.5s ease-in;
+
+}
+
+.swiper-pagination-bullet-active{
+    background: #0059ff !important;
+    border-color: #0059ff;
+
+
+}
+.swiper-pagination-bullet-active::after{
+    content: '';
+    position: absolute;
+    top: -6px;                                                                                                                                                                 
+    left: -6px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top-color: #0059ff;
+    border-radius: 50%;
+    animation: circularProgress 20s linear infinite;
+}
+
+/* Animação do progresso */
+@keyframes circularProgress {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+/* Fim Animação do progresso */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #0059ff;
+}
+
+
+/* DESCRITIVO SLIDER HOME 1° */
+.main-slide-container-1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+.title-slider1 {
+    width: 100%;
+    height: auto;
+    font-size: 2.7rem;
+    color:#fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.subtitle-slider1{
+    width: 60%;
+    height: auto;
+    font-size: 2rem;
+    color: #0059ff;
+    font-weight: 400;
+    letter-spacing: 5px;
+    
+}
+
+
+@keyframes subirFrase {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    
+}
+
+@keyframes aparecerDescription{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slider-description {
+    width: 70%;
+    height: auto;
+    margin: 20px 0px;
+    font-size: 1.2rem;
+    color:#fff;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    animation: aparecerDescription 1.5s ease-in forwards;
+}
+
+
+
+
+/* FIM DESCRITIVO SLIDER HOME 1° */
+
+
+/* INICIO DESCRITIVO SLIDER HOME 2° */
+.main-slide-container-2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+}
+
+.title-slider2{
+    width: 100%;
+    height: auto;
+    font-size: 2.1rem;
+    letter-spacing: 5px;
+    color:#fff;
+    font-weight: 600;
+}
+
+.subtitle-slider2{
+    width: 100%;
+    height: auto;
+    font-weight: 400;
+    font-size: 1.9rem;
+    color: #0059ff;
+    margin: 20px 0px;
+}
+.description-slider2{
+    width: 60%;
+    height: auto;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    animation: aparecerDescription 1.5s ease-in forwards;
+    opacity: 0;
+    position: relative;
+    color: #fff;
+    font-weight: lighter;
+}
+.title-slider2, .subtitle-slider2 {
+    position: relative;
+}
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* FIM DESCRITIVO SLIDER HOME 2° */
+
+
+
+/* INICIO DESCRITIVO SLIDER HOME 3° */
+
+.main-slide-container-3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+}
+
+.title-slider3{
+    width: 100%;
+    height: auto;
+    color: #0059ff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    opacity: 0;
+    position: relative;
+}
+
+.subtitle-slider3{
+    width: 70%;
+    height: auto;
+    color:#fff;
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    position: relative;    
+    font-weight: lighter;
+}
+
+.services-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.service-div-1, .service-div-2, .service-div-3, .service-div-4{
+    width: 40%;
+    height: 115px;
+    margin: 5px;
+    background-color: rgba(41, 41, 41, 0.05);
+    backdrop-filter: blur(30px);
+    border: 1px solid #0059ff;
+    overflow: hidden;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    text-shadow: none;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+    cursor: pointer;    
+    opacity: 0;
+    position: relative;
+
+}
+.mini-service-title{
+    width: 100%;
+    height: auto;
+    color: #0059ff;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+.mini-service-description{
+    width: 100%;
+    height: auto;
+    font-size: 1.1rem;
+    text-align: justify;
+    text-transform: none;
+    padding-top: 10px;
+    color: #fff;    
+}
+.service-div-1:hover, .service-div-2:hover, .service-div-3:hover, .service-div-4:hover{
+    background-color: rgba(30, 144, 255, 0.75);
+    backdrop-filter: blur(30px);
+    color: #fff;
+    border: 1.5px solid #fff;
+}
+
+.service-div-1:hover .mini-service-title, .service-div-2:hover .mini-service-title, .service-div-3:hover .mini-service-title,  .service-div-4:hover .mini-service-title{
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+}
+
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* FIM DESCRITIVO SLIDER HOME 3° */
+
+
+/* INICIO DESCRITIVO SLIDER HOME 4° */  
+.main-slide-container-4{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+}
+.title-slider4{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    color: #0059ff;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;  
+}
+.subtitle-slider4{
+    width: 70%;
+    height: auto;
+    color:#fff;
+    font-size: 1.9rem;
+    margin: 20px 0px;
+    animation-delay: 0.5s;
+}
+.title-slider4, .subtitle-slider4 {
+    opacity: 0;
+    position: relative;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FIM DESCRITIVO SLIDER HOME 4° */
+  
+
+/* Inicialização das animações */
+.main-slide-container-1,
+.main-slide-container-2,
+.main-slide-container-3,
+.main-slide-container-4 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.8s ease;
+}
+
+/* Quando a animação está ativa */
+.main-slide-container-1.animate,
+.main-slide-container-2.animate,
+.main-slide-container-3.animate,
+.main-slide-container-4.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 1° SLIDE */
+.main-slide-container-1.animate .title-slider1, .subtitle-slider1{
+    transform: translateY(100px);
+    animation: subirFrase 2s ease-out forwards;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+}
+.main-slide-container-1.animate .slider-description {
+    animation: aparecerDescription 2s ease-in forwards;
+}
+.main-slide-container-1.animate .slider-button{
+    animation: subirFrase 2s ease-out forwards;
+}
+/* 1° SLIDE */
+
+/* 2° SLIDE */
+.main-slide-container-2.animate .title-slider2{
+    animation: slideInLeft 1s ease-in forwards;
+}
+.main-slide-container-2.animate .subtitle-slider2{
+    animation: subirFrase 1.5s ease-out forwards;
+}
+.main-slide-container-2.animate .description-slider2{
+    animation: fadeIn 1.5s ease-in forwards;
+}
+/* 2° SLIDE */
+
+/* 3° SLIDE */
+.main-slide-container-3.animate .title-slider3{
+    animation: scaleUp 1s ease-out forwards;
+}
+.main-slide-container-3.animate .subtitle-slider3{
+    animation: scaleUp 1.3s ease-out forwards;
+    animation-delay: 0.5s;
+}
+.main-slide-container-3.animate .service-div-1{
+    animation: subirFrase 1s ease-out forwards;
+    animation-delay: 0.7s;
+}
+.main-slide-container-3.animate .service-div-2{
+    animation: subirFrase 1s ease-out forwards;
+    animation-delay: 1s;
+}
+.main-slide-container-3.animate .service-div-3{
+    animation: subirFrase 1s ease-out forwards;
+    animation-delay: 1.3s;
+}
+.main-slide-container-3.animate .service-div-4{
+    animation: subirFrase 1s ease-out forwards;
+    animation-delay: 1.6s;
+}
+/* 3° SLIDE */
+
+/* 4° SLIDE */
+.main-slide-container-4.animate .title-slider4{
+    animation: fadeInUp 1s ease-out forwards;
+} 
+.main-slide-container-4.animate .subtitle-slider4{
+    animation: subirFrase 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+/* 4° SLIDE */
+/* FIM DO SLIDER HOME */
+/****************** PÁGINA HOME FIM **************************/
+
+
+
+/****************** ABA EMPRESA INICIO **********************/
+/****POLÍTICA DE PRIVACIDADE INICIO ****/
+.main-privacidade{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    flex-direction: column;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    background-image: url('../img/Empresa/Privacidade/Circuit-Board.svg');
+    background-position: center;
+    background-color: rgba(41, 41, 41, 0.55);
+}
+.section-privacidade{
+    width: 100%;
+    padding-top: 150px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    animation: aparecerDescription 1s ease-in forwards;
+}
+.section-privacidade.visible {
+    opacity: 1;
+  }
+.section-privacidade2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 100px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.section-privacidade2.visible {
+    opacity: 1;
+}
+.main-privacidade h1{
+    font-size: 2.5rem;
+    color: #0059ff;
+    text-transform: uppercase;
+}
+.p-privacidade{
+    font-size: 1rem;
+    margin-bottom: 100px !important;
+}
+.main-privacidade p{
+    color: #e1e1e1;
+    margin-bottom: 25px;
+}
+
+.main-privacidade p span{
+    margin-left: 125px;
+}
+
+.main-privacidade h2{
+    color: #3666be;
+    margin-top: 30px;
+}
+
+.main-privacidade h3{
+    color: #cccc;
+}
+.main-privacidade h4{
+    color: #cccc;
+}
+.main-privacidade ul li{
+    color: #e1e1e1;
+    /*text-decoration: underline;
+    text-decoration-color: #1e90ff;
+    text-underline-offset: 4px;*/
+}
+.main-privacidade ul li::marker{
+    color: #0059ff;
+    font-size: 1.5rem;
+}
+
+.div-title-content-privacidade{
+    cursor: pointer;
+    margin-top: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #0059ff;
+    background: none;
+    
+}
+.div-content-privacidade{
+    width: 100%;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: justify;
+    margin-bottom: 10px
+}
+/**** POLÍTICA DE PRIVACIDADE FIM ****/
+
+/**** SOBRE NÓS INICIO ****/
+.main-sobrenos{
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+    
+}
+.section-sobrenos{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+    z-index: 1;
+    position: relative;
+}
+
+.section-sobrenos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1; /* Garante que o overlay esteja abaixo dos textos */
+    background: 
+        radial-gradient(circle, rgba(0, 0, 0, 0.2) 1%, rgba(0, 0, 0, 0.8) 100%),
+        url('../img/Empresa/Sobre/img-sobrenos.jpg') no-repeat center center;
+    background-size: cover;
+    filter: grayscale(30%); /* Deixa a imagem preto e branco */
+    opacity: 0.45; /* Escurece a imagem para maior contraste */
+}
+.title-sobrenos{
+    color: rgb(225, 242, 248);    
+    font-size: 1.5rem;
+    font-family:'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    transform: translateX(-700px);
+    opacity: 0;
+}
+
+.title-sobrenos::after{
+    position: absolute;
+    content: " ";
+    width: 80%;
+    height: 2px;
+    background: #0059ff;
+    bottom: -15px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    
+}
+
+.text-sobrenos{
+    color: #fff;
+    width: 50%;
+    height: auto;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 80px;
+    font-family:'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    transform: translateY(700px);
+    opacity: 0;
+    z-index: 2;
+}
+.text-sobrenos span{
+    color: #0059ff;
+    
+}
+.section-sobrenos button{
+    text-decoration: underline;
+    font-size: 0.9rem;
+    color: #fff;
+    background: none;
+    border: none;
+    z-index: 2;
+    transition: color 0.2s ease;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    font-weight: 600;
+}
+.section-sobrenos button:hover{
+    color: #0059ff;
+}
+/* Contêiner da seta para centralização */
+.arrow-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #0059ff; /* Cor da seta */
+    animation: bounce 2s infinite, subirFrase 1s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+    z-index: 2;
+    
+}  
+    /* Animação apenas na vertical */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+} /* Animação apenas na vertical */
+
+
+
+  
+.section-sobrenos2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(204, 223, 231);
+    background-image: url('../img/Empresa/Privacidade/Circuit-Board.svg');
+    background-position: center;
+    background-color: rgba(41, 41, 41, 0.55);
+    z-index: 1;
+}
+
+.div-sobrenos2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    font-family:'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    padding: 20px;
+}
+
+.title-sobrenos2{
+    width: 40%;
+    color: rgb(225, 242, 248);    
+    font-size: 1.5rem;    
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-500px) translateY(-100px) scale(0.1);
+}
+.title-sobrenos2::after{
+    position: absolute;
+    content: " ";
+    width: 80%;
+    height: 2px;
+    background: #0059ff;
+    bottom: -15px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+}
+.text-sobrenos2{
+    color: #fff;
+    width: 80%;
+    height: auto;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(-100%) scale(0.1);
+}
+.ul-list-sobrenos2{
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+    list-style: none;
+    overflow: hidden;
+}
+.list-sobrenos2{
+    width: 40%;
+    padding-left: 20px;
+    position: relative;
+    opacity: 0;
+}
+.list-sobrenos2:nth-child(1){
+    transform: translateX(-100%);
+}
+.list-sobrenos2:nth-child(2){
+    transform: translateY(100%);
+}
+.list-sobrenos2:nth-child(3){
+    transform: translateX(100%);
+}
+
+.list-sobrenos2::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -20px;
+    color: #0059ff; 
+    font-size: 2.5rem; 
+}
+
+
+.div-sobrenos3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+.container-sobrenos3{
+    width: 45%;
+    height: 150px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px #0059ff;
+    background-color: rgba(41, 41, 41, 0.05);
+    backdrop-filter: blur(3px);
+    padding: 20px 0px;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.title-sobrenos3{
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    text-align: center;
+    color: #0059ff;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: rotate(45deg) scale(0.2);
+
+}
+.text-sobrenos3{
+    width: 80%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 1;
+    animation: fadeInSlideRight 1.5s ease-out 0.3s forwards;
+}
+
+
+.section-sobrenos3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-bottom: 100px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-image: url('../img/Empresa/Privacidade/Circuit-Board.svg');
+    background-position: center;
+    background-color: rgba(41, 41, 41, 0.55);
+}
+.div-sobrenos-3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title-sobrenos-3{
+    width: 40%;
+    color: rgb(225, 242, 248);    
+    font-size: 1.5rem;    
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.section-sobrenos3 div h2::after{
+    position: absolute;
+    content: " ";
+    width: 80%;
+    height: 2px;
+    background: #0059ff;
+    bottom: -15px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+}
+
+.text-sobrenos-3{
+    color: #fff;
+    width: 40%;
+    height: auto;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 80px;
+    padding: 5px;
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.sobrenos-button{
+    width: 30%;
+    height: auto;
+    position: relative;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    border: solid 1px #0059ff;
+    padding: 15px 50px;
+    color: #0059ff;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: 900;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+
+.sobrenos-button::before {
+    content: "";
+    position: absolute;
+    top: -200%; /* Fora da área visível */
+    left: -300%; /* Fora da área visível */
+    width: 300%; /* Cobre toda a área do botão */
+    height: 300%; /* Proporcional ao tamanho do botão */
+    background-color: #0059ff; /* Cor do efeito de fundo */
+    transform: rotate(-10deg); /* Garante o movimento diagonal */
+    z-index: -1; /* Fica atrás do texto do botão */
+    transition: top 0.4s ease-in, left 0.2s linear;
+}
+
+/* Apenas ativa o hover */
+.sobrenos-button:hover::before {
+    top: 100%;
+    left: 0;
+}
+
+/* Remove a transição quando o mouse sai */
+.sobrenos-button:not(:hover)::before {
+    transition: none;
+    top: -200%;
+    left: -300%;
+}
+
+/**** SOBRE NÓS FIM ****/
+/****************** ABA EMPRESA FIM **********************/
+
+
+/****************** PÁGINA CONTATO INICIO **************************/
+.mainContato{
+    width: 100%;
+    height: auto;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('../img/Contato/background-contato.jpg') no-repeat center center;
+    background-size: cover; /* Ajusta o tamanho para cobrir a área */
+    background-repeat: no-repeat; /* Evita repetições */
+    background-position: center; /* Centraliza o GIF */
+    padding-bottom: 150px;
+}
+
+.mainContato article{
+    width: 95%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+    background-color: rgba(41, 41, 41, 0.35);/*background-color: #292929;*/
+    backdrop-filter: blur(30px);
+    margin-bottom: 100px; 
+    
+    
+}
+
+.mainContato .section-form{
+    width: 60%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+
+}
+
+.titleForm{
+    width: 100%;
+    height: auto;
+    text-align: center;     
+    text-transform: uppercase;    
+    margin-bottom: 10px;
+    
+}
+
+.titleForm h1{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.mainContato form{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #0059ff;
+}
+
+.mainContato form .div-input-form{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.mainContato .input-text-form{
+    width: 100%;
+    height: 20px;
+    border: none;
+    border-bottom: 0.5px solid #0059ff;
+    outline: none;
+    background: transparent;
+    color: #e1e1e1;
+    font-size: 0.8rem;
+    padding: 10px 5px;
+}
+
+.mainContato .input-text-form.endereco{
+    flex: 1;
+    margin-right: 20px;
+}
+.mainContato .input-text-form.numero{
+    width: 100px;
+}
+
+.mainContato .label-form{
+    font-size: 1rem;
+    color: #e1e1e1;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+
+}
+.label-form.numero{
+    right: 40px;
+    left: unset;
+}
+
+
+.mainContato .input-text-form:focus + .label-form, .mainContato .input-text-form:not(:placeholder-shown) + .label-form,
+.mainContato textarea:focus + .label-form, 
+.mainContato textarea:not(:placeholder-shown) + .label-forml {
+    top: -10px;
+    font-size: 0.8rem;
+    color: #0059ff;
+} 
+
+.mainContato button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    margin-top: 20px;
+    background: #0059ff;
+    color: #e1e1e1;
+    transition: background-color 0.3s ease-in, font-weight 0.5s ease-in, color 0.5s ease-in;
+}
+
+.mainContato button:hover{
+    color: #fff;
+    font-weight: bold;
+    background: rgb(58, 58, 58);
+}
+
+.mainContato textarea{
+    width: 100%;
+    height: 40px !important;    
+    outline: none;
+    border: none;
+    border-bottom: 0.5px solid #0059ff;
+    background: transparent;
+    color: #e1e1e1;
+    font-size: 0.8rem;
+    padding: 10px 5px;
+}
+.div-checkbox-form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#checkbox-send-form{
+    width: 5%;
+    transform: scale(0.8); 
+}
+#label-checkbox-form{
+    width: 95%;
+    height: auto;
+    color: rgb(204, 223, 231);
+    font-size: 0.9rem;
+}
+.link-checkbox-form{
+    text-decoration: none;
+    color: #0059ff;
+    transition: color 0.3s ease;
+}
+.link-checkbox-form:hover{
+    color: #666666;
+    text-decoration: underline;
+}
+.g-recaptcha{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+.section-contato-info{
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+}
+
+.section-contato-info h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.section-contato-info2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;    
+}
+.section-contato-info2 .p-contato{
+    width: 90%;
+    height: auto;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+    right: 0px;
+    left: 0px;
+    margin: 0 auto;
+    border-bottom: 1px solid #0059ff;
+}
+.section-contato-info2 .p-contato p{
+    font-size: 1.2rem;
+    color: #0059ff;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-contato-info2 .info-contato{
+    width: 97%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin-top: 120px;
+    gap: 20px;
+}
+
+.section-contato-info2 .info-contato div{
+    width: 80%;
+    height: 80px;
+    border: solid 1px #0059ff;
+    color: #fff;
+    padding: 7px;
+    overflow: hidden;
+    transition: background-color 0.5s ease-in, border 0.5s ease-in, color 0.5s ease-in;
+}
+
+.section-contato-info2 .info-contato div:hover{
+    background-color: #0059ff;
+    border: solid 1px #fff;
+    color: black;
+}
+
+.section-contato-info2 .info-contato div h3{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+}
+.section-contato-info2 .info-contato div p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.link-contato{
+    text-decoration: none;
+    width: 100%;
+    height: 80px;
+}
+
+
+/********* PÁGINA OBRIGADO ******/
+.main-obrigado{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+}
+.main-obrigado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/Contato/Obrigado/background-contato.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0; 
+}
+.main-obrigado article{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.main-obrigado i{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 6.5rem;
+    color: #0059ff;
+}
+
+.main-obrigado h1{
+    font-size: 2.5rem;
+    color: #0059ff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-obrigado h2{
+    font-size: 1.8rem;
+    color: #e1e1e1;
+    margin-bottom: 40px;
+}
+
+.main-obrigado article div{
+    width: 50px;
+    height: 50px;
+    background: #0059ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 42px;
+    overflow: hidden;
+    transition: width 0.4s ease, border-radius 0.4s ease, padding-left 0.3s ease, padding-right 0.3s ease;
+}
+
+.main-obrigado article div i{
+    font-size: 2rem;
+    color: #fff;
+}
+.main-obrigado article div span{
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.main-obrigado article div:hover{
+    width: 130px;
+    border-radius: 25px;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+.main-obrigado article div:hover span{
+    opacity: 1;
+}
+
+/* ANIMAÇÃO */
+.icon-obrigado{
+    opacity: 0;
+    rotate: 15deg;
+    transform: translateY(-25px);
+}
+.h1-obrigado{
+    opacity: 0;
+    transform: translateY(-25px);
+}
+.h2-obrigado{
+    opacity: 0;
+    transform: translateX(-125px);
+}
+.back-button{
+    opacity: 0;
+    transform: scale(1.8) translateY(50px);
+}
+/* ANIMAÇÃO */
+
+
+/****************** PÁGINA CONTATO FIM **************************/
+
+
+
+/****************** PÁGINA ESPECIALIZAÇÃO E SERVIÇOS INICIO **************************/
+
+.div-button-contact-solutions{
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.h3-contact-solutions{
+        color: rgb(225, 242, 248);    
+        font-size: 1.5rem;        
+        letter-spacing: 3px;
+        margin-bottom: 40px;
+        font-weight: 600;
+        position: relative;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: scale(0.3) translateY(-100%);
+
+}
+.h3-contact-solutions::after{
+    position: absolute;
+    content: " ";
+    width: 80%;
+    height: 2px;
+    background: #0059ff;
+    bottom: -15px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+}
+.p-contact-solutions{
+    color: #fff;
+    width: 50%;
+    height: auto;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: scale(0.3) translateY(100%);
+}
+.button-contact-solutions{
+    width: 50%;
+    height: auto;
+    position: relative;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    border: solid 1px #0059ff;
+    padding: 15px 50px;
+    color: #0059ff;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: 900;
+    z-index: 10;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.button-contact-solutions::before {
+    content: "";
+    position: absolute;
+    top: -200%; /* Fora da área visível */
+    left: -300%; /* Fora da área visível */
+    width: 300%; /* Cobre toda a área do botão */
+    height: 300%; /* Proporcional ao tamanho do botão */
+    background-color: #0059ff; /* Cor do efeito de fundo */
+    transform: rotate(-10deg); /* Garante o movimento diagonal */
+    z-index: -1; /* Fica atrás do texto do botão */
+    transition: top 0.4s ease-in, left 0.2s linear;
+}
+
+/* Apenas ativa o hover */
+.button-contact-solutions:hover::before {
+    top: 100%;
+    left: 0;
+}
+
+/* Remove a transição quando o mouse sai */
+.button-contact-solutions:not(:hover)::before {
+    transition: none;
+    top: -200%;
+    left: -300%;
+}
+.h3-contact-solutions-2{
+        color: rgb(225, 242, 248);    
+        font-size: 1.5rem;        
+        letter-spacing: 3px;
+        margin-bottom: 40px;
+        font-weight: 600;
+        position: relative;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: scale(0.3) translateY(-100%);
+
+}
+.h3-contact-solutions-2::after{
+    position: absolute;
+    content: " ";
+    width: 80%;
+    height: 2px;
+    background: #0059ff;
+    bottom: -15px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+}
+.p-contact-solutions-2{
+    color: #fff;
+    width: 60%;
+    height: auto;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: scale(0.3) translateY(100%);
+}
+.button-contact-solutions-2{
+    width: 50%;
+    height: auto;
+    position: relative;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    border: solid 1px #0059ff;
+    padding: 15px 50px;
+    color: #0059ff;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: 900;
+    z-index: 10;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.button-contact-solutions-2::before {
+    content: "";
+    position: absolute;
+    top: -200%; /* Fora da área visível */
+    left: -300%; /* Fora da área visível */
+    width: 300%; /* Cobre toda a área do botão */
+    height: 300%; /* Proporcional ao tamanho do botão */
+    background-color: #0059ff; /* Cor do efeito de fundo */
+    transform: rotate(-10deg); /* Garante o movimento diagonal */
+    z-index: -1; /* Fica atrás do texto do botão */
+    transition: top 0.4s ease-in, left 0.2s linear;
+}
+
+/* Apenas ativa o hover */
+.button-contact-solutions-2:hover::before {
+    top: 100%;
+    left: 0;
+}
+
+/* Remove a transição quando o mouse sai */
+.button-contact-solutions-2:not(:hover)::before {
+    transition: none;
+    top: -200%;
+    left: -300%;
+}
+.link-button-solution{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+
+
+/* SEÇÃO DE ESPECIALIZAÇÕES */
+.main-especializacao{
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.section-main-especializacao{
+    width: 100%;
+    height: 100vh;
+    position: relative;    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    z-index: 1;
+}
+.section-main-especializacao::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/Especialização/especializacao-section-main.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 0;  
+}
+.title-main-especializacao{
+    color: rgb(225, 242, 248);    
+    font-size: 1.5rem;        
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    position: relative;
+    text-transform: uppercase;
+    transform: translateX(-70%) rotate(-5deg);
+    opacity: 0;
+}
+.title-main-especializacao::after{
+    position: absolute;
+    content: " ";
+    width: 80%;
+    height: 2px;
+    background: #0059ff;
+    bottom: -15px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+}
+.text-main-especializacao{
+    color: #fff;
+    width: 60%;
+    height: auto;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 80px;
+    transform: scale(0.6) translateY(100%);
+    opacity: 0;
+}
+.button-scrollTo{
+    text-decoration: underline;
+    font-size: 0.9rem;
+    color: #fff;
+    background: none;
+    border: none;
+    z-index: 2;
+    transition: color 0.2s ease;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(100%);
+}
+.button-scrollTo:hover{
+    color: #0059ff;
+}
+
+
+/* SEÇÃO DE ESPECIALIZAÇÕES */
+.section-especializacao{
+    width: 100%;
+    height: auto;
+    padding-top: 130px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family:'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    background-image: url('../img/Empresa/Privacidade/Circuit-Board.svg');
+    background-position: center;
+    background-color: rgba(41, 41, 41, 0.55);
+}
+/* SEÇÃO DE ESPECIALIZAÇÕES */
+
+/* SEÇÃO DE SERVIÇOS */
+.main-services{
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.section-main-services{
+    width: 100%;
+    height: 100vh;
+    position: relative;    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    z-index: 1;
+}
+.section-main-services::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/Especialização/background-services-main.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 0; 
+}
+.title-main-services{
+    color: rgb(225, 242, 248);    
+    font-size: 1.5rem;        
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    position: relative;
+    text-transform: uppercase;
+    transform: translateX(70%) rotate(5deg);
+    opacity: 0;
+}
+.title-main-services::after{
+    position: absolute;
+    content: " ";
+    width: 80%;
+    height: 2px;
+    background: #0059ff;
+    bottom: -15px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+}
+.text-main-services{
+    color: #fff;
+    width: 60%;
+    height: auto;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    transform: scale(0.3) translateY(-100%) translateX(50%);
+    opacity: 0;
+}
+
+
+.section-services{
+    width: 100%;
+    height: auto;
+    padding-top: 130px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family:'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    background-image: url('../img/Empresa/Privacidade/Circuit-Board.svg');
+    background-position: center;
+    background-color: rgba(41, 41, 41, 0.55);
+}
+.h1-services{
+    color: rgb(225, 242, 248);    
+    font-size: 1.5rem;        
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    position: relative;
+    text-transform: uppercase;
+    transform: translateY(100%) rotate(-5deg) scale(0.4);
+    opacity: 0;
+}
+.h1-services::after{
+    position: absolute;
+    content: " ";
+    width: 80%;
+    height: 2px;
+    background: #0059ff;
+    bottom: -15px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+}
+.div-containers-services{
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 50px; 
+}
+
+.item-services{
+    width: 45%;
+    height: 230px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(41, 41, 41, 0.05);
+    backdrop-filter: blur(3.5px);
+    border: 1px solid #0059ff;
+    overflow: hidden;    
+    transition: border 0.6s ease-in-out, background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transform: scale(0.2) translateY(-100%);
+    opacity: 0;
+}
+.item-services:hover{
+    border: 1px  solid #fff;
+    background: #0059ff;
+
+}
+
+.item-header-services{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+.item-title-services{
+    font-size: 1.3rem;
+    color: #0059ff;
+    text-shadow: 0 0 5px #0059ff;
+    text-transform: uppercase;
+    font-family:'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    font-weight: 600;
+    transition: color 0.6s ease-in-out, text-shadow 0.6s ease-in-out;
+}
+.item-services:hover .item-title-services{
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+}
+.item-text-services{
+    font-size: 1rem;
+    color: #fff;
+    font-family:'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    padding: 5px;
+    text-align: center;
+}
+
+
+/* SEÇÃO DE SERVIÇOS */
+
+/****************** PÁGINA ESPECIALIZAÇÃO E SERVIÇOS FIM **************************/
+
+
+
+
+
+/***************************** FOOTER INICIO ************************************/
+footer{
+    clear: both;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(90deg, rgba(27,27,27,1) 0%, rgba(40,40,40,1) 47%, rgba(27,27,27,1) 81%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-columns{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 10px;
+    gap: 10px;
+}
+
+.footer-column{
+    width: 25%;
+    height: 95%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.footer-section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+.logo-footer{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.title-footer-section{
+    width: 100%;
+    height: auto;
+    font-size: 0.75rem;
+    color: #0059ff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.footer-social{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    gap: 5px;
+    padding-left: 0px;
+    padding-top: 10px;
+}
+.link-instagram{
+    border-radius: 50%;
+    background: none;
+}
+.link-instagram:hover{
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+.link-linkedin{
+    border-radius: 50%;
+    background: none;
+}
+.link-linkedin:hover{
+    background: #0077B5;
+}
+.footer-social-item{
+    font-size: 2.2rem;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid #0059ff;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(204, 223, 231);
+}
+
+.footer-section:nth-child(2) .link-footer{
+    padding-left: 5px;
+}
+.link-footer{
+    text-decoration: none;
+    color: rgb(204, 223, 231);
+    transition: 0.3s color ease;
+}
+.link-footer:hover{
+    color: #0059ff;
+}
+.icon-link-footer{
+    color: #0059ff;
+}
+.navigation-footer-section{
+    padding-top: 10px;
+    list-style: none;
+    padding-left: 0px;
+    color: rgb(204, 223, 231);
+}
+
+.link-item-footer{
+    text-decoration: none;
+    color: rgb(204, 223, 231);
+    transition: color 0.3s ease;
+    list-style: none;
+}
+.link-item-footer:hover{
+    color: #0059ff;
+}
+/***************************** FOOTER FIM ************************************/
+
+
+
+
+
+
+
+/***************************** COOKIE BANNER INIICIO ************************************/
+.cookie-banner {
+    position: fixed;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    width: 90%;
+    background-color: rgba(41, 41, 41, 0.35);
+    backdrop-filter: blur(30px);
+    border: 1px solid #0059ff;
+    color: #fff;
+    padding: 25px;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cookie-banner-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.cookie-banner-content p{
+    width: 60%;
+}
+
+.cookie-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.cookie-banner a {
+    color: #0059ff;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+.cookie-banner a:hover{
+    color: #0059ff;
+}
+
+.btn-accept {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    border: solid 1px #0059ff;
+    padding: 10px 50px;
+    color: #0059ff;
+    text-shadow: 0 0 10px #0059ff;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-accept::before {
+    content: "";
+    position: absolute;
+    top: -200%; /* Fora da área visível */
+    left: -300%; /* Fora da área visível */
+    width: 300%; /* Cobre toda a área do botão */
+    height: 300%; /* Proporcional ao tamanho do botão */
+    background-color: #0059ff; /* Cor do efeito de fundo */
+    transform: rotate(-10deg); /* Garante o movimento diagonal */
+    z-index: -1; /* Fica atrás do texto do botão */
+    transition: top 0.4s ease-in, left 0.2s linear;
+}
+.btn-accept:hover::before{
+    top: 100%;
+    left: 0;
+}
+
+.btn-accept:not(:hover)::before {
+    transition: none;
+    top: -200%;
+    left: -300%;
+}
+
+.definition-cookies-banner{
+    position: absolute;
+    right: 180px;
+    bottom: 10px;
+}
+/***************************** COOKIE BANNER FIM ************************************/
+
+
+
+/***************************** BTN-WHATSAPP INICIO ************************************/
+.whatsapp-button {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    z-index: 2000;
+    width: 60px;
+    height: 60px;
+    border: solid 1px #0059ff;
+    background-color: #0059ff;
+    backdrop-filter: blur(30px);
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.whatsapp-button i {
+    font-size: 2.5rem;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #0059ff;
+    transition: color 0.3s ease;
+}
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+/***************************** BTN-WHATSAPP FIM ************************************/
+
+/***************************** LOADING SCREEN INICIO ************************************/
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(33,33,33,1) 47%, rgba(20,20,20,1) 81%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+  }
+  
+  .spinner-loading {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-loading {
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #0059ff; /* Cor do círculo giratório */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.logo-loading {
+    position: absolute;
+    width: 190px; /* Tamanho da logo */
+    height: 190px;
+    background-image: url('/src/UI/Loading-IMG/Logo-Loading.png'); /* Caminho da logo */
+    background-size: contain; /* Mantém proporção da imagem */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.loading-text {
+    padding-top: 50px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: #0059ff;
+}
+
+.dots {
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    color: #fff;
+    animation: dot-blink 3s infinite;
+}
+
+.dots span {
+    opacity: 0;
+    animation: dotFade 3s infinite;
+    display: inline-block;
+}
+
+.dots span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dots span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.dots span:nth-child(3) {
+    animation-delay: 2s;
+}
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes dot-blink {
+    0% {
+        content: '.';
+        opacity: 1;
+    }
+    33% {
+        content: '..';
+        opacity: 1;
+    }
+    66% {
+        content: '...';
+        opacity: 1;
+    }
+    100% {
+        content: '';
+        opacity: 0;
+    }
+}
+/***************************** LOADING SCREEN FIM ************************************/
+
+
+
+
+
+
+
+
+
+/***************************** WEBKIT ************************************/
+/* Firefox e Opera */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #0059ff #252525;
+}
+
+/* Chrome, Safari e outros navegadores WebKit */
+::-webkit-scrollbar {
+    width: 8px; /* largura da barra */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0059ff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #252525;
+    border-radius: 10px;
+}
+/***************************** WEBKIT ************************************/
+
+/***************************** ESPAÇO PARA MEDIA INICIO ************************************/
+
+/* Para telas muito pequenas (smartphones compactos) */
+@media (orientation: portrait) {
+    @media (min-width: 320px)  {
+        /* NAVBAR */
+        .nav-list{
+            width: 100vw;
+            gap: 40px;
+            top: 0vh;
+            height: 100vh;
+            padding-top: 7rem;
+        }
+        .div-logo-nav{
+            width: 55%;
+            height: 100px;
+            display: flex;
+        }
+        .navbar-logo{
+            width: 100%;
+        }
+        /* NAVBAR */  
+
+        /* COOKIE BANNER */
+        .cookie-banner-content p{
+            width: 80%;
+            font-size: 0.9rem;
+        }
+        .cookie-logo{
+            display: none;
+        }
+        .btn-accept{
+            font-size: 0.9rem;
+            padding: 5px 50px;
+            margin-bottom: 20px;
+        }
+        .definition-cookies-banner{
+            left: 5px;
+            width: 60%;
+            bottom: 5px;
+        }
+        /* COOKIE BANNER */
+    
+        /* SLIDER HOME */
+        /* 1°SLIDER */
+        .title-slider1{
+            font-size: 1rem;
+            margin-bottom: 0px;
+        }
+        .subtitle-slider1{
+            font-size: 0.9rem;
+            width: 90%;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .slider-description{
+            font-size: 0.7rem;
+            width: 80%;
+            margin: 0px;
+        }
+        .slider-button{
+            margin-top: 20px;
+            margin-bottom: -20px;
+            font-size: 0.7rem;
+            width: 60%;
+            padding: 5px 10px;
+        }
+        .swiper-pagination{
+            padding-bottom: 10px;
+        }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+        transform: scale(0.8);
+    }
+        /* 1°SLIDER */
+        /* 2°SLIDER */
+        .title-slider2{
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        .subtitle-slider2{
+            width: 90%;
+            font-size: 0.9rem;
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+        .description-slider2{
+            font-size: 0.7rem;
+            width: 80%;
+            margin-bottom: 5px;
+        }
+        /* 2°SLIDER */
+        /* 3°SLIDER */
+        .title-slider3{
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+        .subtitle-slider3{
+            font-size: 1rem;
+            width: 85%;
+        }
+        .service-div-1, .service-div-2, .service-div-3, .service-div-4{
+            width: 37%;
+            height: 30px;
+        }
+        .mini-service-title{
+            font-size: 0.8rem;
+        }
+        /* 3°SLIDER */
+        /* 4°SLIDER */
+        .title-slider4{
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+        .subtitle-slider4{
+            font-size: 1rem;
+            margin: 5px 0px;
+        }
+        /* 4°SLIDER */
+        /* SLIDER HOME */
+    
+
+    /* ************* SUB MENU EMPRESA ********** */
+        /* PÁGINA PRIVACIDADE */
+        .main-privacidade{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .section-privacidade h1{ 
+            width: 100%;
+            font-size: 1.5rem;       
+        }
+        .div-title-content-privacidade{
+            width: 100%;
+        }
+        .div-content-privacidade{
+            width: 90%;
+
+        }
+
+        /* PÁGINA PRIVACIDADE */
+
+        /* PÁGINA SOBRE NÓS */
+        .section-sobrenos{
+            padding: 5px;
+            padding-top: 40px;
+        }
+        .section-sobrenos h1{
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .section-sobrenos p{
+            width: 100%;    
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+        .title-sobrenos2{
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        .text-sobrenos2{
+            width: 100%;
+        }
+        .ul-list-sobrenos2{
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .list-sobrenos2{
+            width: 100%;
+        }
+        .div-sobrenos3{
+            flex-wrap: wrap;
+        }
+        .div-sobrenos3 div{
+            width: 80%;
+            height: auto;
+        }
+        .section-sobrenos3 div h2{
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        .section-sobrenos3 div p{
+            width: 100%;
+            font-size: 1rem;
+        }
+        .sobrenos-button{
+            width: 90%;
+        }
+        /* PÁGINA SOBRE NÓS */
+        /* ************* SUB MENU EMPRESA ********** */
+
+        /* ************* PAGE CONTATO ********** */
+        /* FORMULÁRIO */
+        .mainContato article{
+            flex-wrap: wrap;
+        }
+        .section-form{
+            width: 100%;
+        }
+        .titleForm h1{
+            width: 100%;
+            font-size: 1.25rem;
+        }
+        .mainContato form{
+            width: 175%;        
+        }
+        #checkbox-send-form{
+            transform: scale(1);
+        }
+        #label-checkbox-form{
+            margin-left: 10px;
+            font-size: 0.85rem;
+        }
+        /* FORMULÁRIO */
+
+        /* INFO CONTATO */
+        .section-contato-info{
+            width: 100%;
+        }
+        .section-contato-info h1{
+            font-size: 1.25rem;
+        }
+        .section-contato-info2 .p-contato{
+            width: 100%;
+            
+        }
+        .section-contato-info2 .p-contato p{
+            font-size: 0.9rem;
+            padding: 0;
+        }
+        .section-contato-info2 .info-contato{
+            width: 100%;        
+        }
+        .section-contato-info2 .info-contato div{
+            width: 100%;
+            height: auto;
+        }
+        .section-contato-info2 .info-contato div p{
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+        .link-contato{
+            height: auto;
+        }
+        /* INFO CONTATO */
+
+        /* PÁGINA OBRIGADO*/
+        .main-obrigado article{
+            padding-top: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .main-obrigado i{
+            font-size: 4rem;
+        }
+        .main-obrigado h1{
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .main-obrigado h2{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        /* PÁGINA OBRIGADO*/
+        /* ************* PAGE CONTATO ********** */
+
+
+        /********* SUB MENU SOLUÇÕES ***********/
+        /***** PAGE ESPECIALIZAÇÃO *****/
+        .main-especializacao{
+            padding-top: 60px;
+        }
+        .title-main-especializacao{
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        .text-main-especializacao{
+            width: 90%;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+
+        .section-especializacao{
+            padding-top: 115px;
+        }
+        .h1-especializacoes{
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .especializacao-item{
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        .h3-contact-solutions{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .p-contact-solutions{
+            width: 90%;
+            font-size: 1.1rem;
+        }
+        .button-contact-solutions{
+            width: 95%;
+        }
+        .h3-contact-solutions-2{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .p-contact-solutions-2{
+            width: 90%;
+            font-size: 1.1rem;
+        }
+        .button-contact-solutions-2{
+            width: 95%;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+
+
+        /***** PAGE SERVIÇOS *****/    
+        .title-main-services{
+            font-size: 1.2rem;
+            margin-top: -30px;
+            margin-bottom: 15px;
+        }
+        .text-main-services{
+            width: 95%;
+            font-size: 1.05rem;
+            margin-bottom: 0px;
+        }
+        .section-services{
+            padding-top: 125px;
+        }
+        .h1-services{
+            margin-bottom: 0px;
+        }
+        .item-services{
+            width: 85%;
+            height: auto;
+        }
+        
+        /***** PAGE SERVIÇOS *****/
+        /********* SUB MENU SOLUÇÕES ***********/
+
+
+        /********* PAGE FOOTER *********/
+        .footer-columns{
+            flex-wrap: wrap-reverse;
+        }
+        .footer-column{
+            width: 100%;
+        }
+        /********* PAGE FOOTER *********/
+    }
+    @media(min-width:360px){
+        /* NAVBAR */
+        .nav-list{
+            width: 80vw;
+            gap: 100px;
+        }
+        /* NAVBAR */
+
+        /* ************* SUB MENU EMPRESA ********** */
+        /* PÁGINA PRIVACIDADE */
+        .div-content-privacidade{
+            width: 80%;
+        }
+        /* PÁGINA PRIVACIDADE */
+
+        /* PÁGINA SOBRE NÓS */
+        .section-sobrenos2{
+            padding-top: 0px;
+        }
+        /* PÁGINA SOBRE NÓS */
+        /* ************* SUB MENU EMPRESA ********** */
+
+        /* ************* PAGE CONTATO ********** */
+        /* NÃO NECESSÁRIO ATÉ O MOMENTO */
+        /* ************* PAGE CONTATO ********** */
+
+        /********* SUB MENU SOLUÇÕES ***********/
+        .button-contact-solutions{
+            width: 85%;
+        }
+        .button-contact-solutions-2{
+            width: 85%;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+        .main-especializacao{
+            padding-top: 80px;
+        }
+        .title-main-especializacao{
+            margin-bottom: 40px;
+        }
+        .section-especializacao{
+            padding-top: 80px;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+
+        /***** PAGE SERVIÇOS *****/   
+        .title-main-services{
+            margin-bottom: 30px;
+        }
+        .section-services{
+            padding-top: 60px;
+        }
+        /***** PAGE SERVIÇOS *****/   
+    }
+    @media(min-width:390px){ 
+        /* ************* SUB MENU EMPRESA ********** */
+        /* PÁGINA PRIVACIDADE */
+        .div-content-privacidade{
+            width: 90%;
+        }
+        /* PÁGINA PRIVACIDADE */
+
+
+        /* PÁGINA SOBRE NÓS */
+        .section-sobrenos h1{
+            margin-bottom: 60px;
+        }
+        /* PÁGINA SOBRE NÓS */
+        /* ************* SUB MENU EMPRESA ********** */
+
+
+        /************ PÁGINA OBRIGADO /CONTATO **********/
+        .main-obrigado article{
+            padding-top: 0px;
+        }
+        .main-obrigado i{
+            font-size: 5rem;
+        }
+        .main-obrigado h1{
+            font-size: 1.7rem;
+        }
+        /************ PÁGINA OBRIGADO /CONTATO **********/
+
+
+        /********* SUB MENU SOLUÇÕES ***********/
+        /***** PAGE ESPECIALIZAÇÃO *****/
+        .text-main-especializacao{
+            margin-bottom: 40px;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+
+
+        /***** PAGE SERVIÇOS *****/   
+        .text-main-services{
+            margin-bottom: 20px;
+        }
+        /***** PAGE SERVIÇOS *****/   
+        /********* SUB MENU SOLUÇÕES ***********/
+    }
+    @media (min-width:412px){
+        /* NAVBAR */
+        .div-logo-nav{
+            width: 40%;
+        }
+        /* NAVBAR */   
+
+        /* SLIDER HOME */
+        /* 1°SLIDER */
+        .title-slider1{
+            font-size: 1.4rem;
+        }
+        .subtitle-slider1{
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+        .slider-description{
+            font-size: 0.9rem;
+            width: 85%;
+        }
+        .slider-button{
+            font-size: 0.9rem;
+            padding: 10px 20px;
+        }
+        .swiper-pagination{
+            padding-bottom: 30px;
+        }
+        /* 1°SLIDER */
+        /* 2°SLIDER */
+        .title-slider2{
+            font-size: 1.3rem;
+        }
+        .subtitle-slider2{
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .description-slider2{
+            font-size: 0.9rem;
+            width: 80%;
+            margin-bottom: 5px;
+        }
+        /* 2°SLIDER */
+        /* 3°SLIDER */
+        .title-slider3{
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+        .subtitle-slider3{
+            font-size: 1.1rem;
+            width: 90%;
+        }
+        .service-div-1, .service-div-2, .service-div-3, .service-div-4{
+            width: 40%;
+        }
+        .mini-service-title{
+            font-size: 0.9rem;
+        }
+        /* 3°SLIDER */
+        /* 4°SLIDER */
+        .title-slider4{
+            font-size: 1.3rem;
+        }
+        .subtitle-slider4{
+            font-size: 1.1rem;
+            margin: 10px 0px;
+        }
+        /* 4°SLIDER */
+        /* SLIDER HOME */
+
+        /* ************* SUB MENU EMPRESA ********** */
+        /* PÁGINA PRIVACIDADE */
+        .div-content-privacidade{
+            width: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .div-title-content-privacidade{
+            width: 100%;
+        }
+        /* PÁGINA PRIVACIDADE */
+
+        /* PÁGINA SOBRE NÓS */
+        .section-sobrenos{
+            padding-top: 80px;
+        }
+        .section-sobrenos p{
+            margin-bottom: 80px;
+            font-size: 1.05rem;
+            padding: 5px;
+        }
+        .section-sobrenos3{
+            padding: 10px;
+            padding-bottom: 100px;
+        }
+        .section-sobrenos3 div h2{
+            width: 80%;
+        }
+        .section-sobrenos3 div p{
+            font-size: 1.05rem;
+        }
+        /* PÁGINA SOBRE NÓS */
+        /* ************* SUB MENU EMPRESA ********** */
+
+        /* ************* PAGE CONTATO ********** */
+        /* NÃO NECESSÁRIO AINDA */
+        /* ************* PAGE CONTATO ********** */
+
+        /********* SUB MENU SOLUÇÕES ***********/
+        /***** PAGE ESPECIALIZAÇÃO *****/
+        .section-main-especializacao{
+            padding-top: 100px;
+        }
+        .text-main-especializacao{
+            font-size: 1.05rem;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+
+        /***** PAGE SERVIÇOS *****/
+        .section-main-services{
+            padding-top: 100px;
+        }
+        .text-main-services{
+            font-size: 1.05rem;
+            margin-bottom: 60px;
+        }
+        .section-services{
+            padding-top: 100px;
+        }
+        /***** PAGE SERVIÇOS *****/
+        /********* SUB MENU SOLUÇÕES ***********/
+    }
+
+    /* Para telas médias (smartphones e tablets pequenos) */
+    @media (min-width: 640px) {
+        /* NAVBAR */
+        .nav-list{        
+            width: 50vw;        
+            gap: 100px;
+        }
+        .div-logo-nav{
+            width: 35%;
+        }
+        /* NAVBAR */
+
+        /* 3°SLIDER */
+        .service-div-1, .service-div-2, .service-div-3, .service-div-4{
+            height: 105px;
+        }
+        .mini-service-description{
+            font-size: 0.8rem;
+            padding-top: 0px;
+        }
+        /* 3°SLIDER */
+        
+        /* ************* SUB MENU EMPRESA ********** */
+        /* PÁGINA PRIVACIDADE */
+        .main-privacidade h1{
+            font-size: 2rem;
+        }
+        /* PÁGINA PRIVACIDADE */
+
+        /* PÁGINA SOBRE NÓS */
+        .section-sobrenos h1{
+            font-size: 1.35rem;
+        }
+        .section-sobrenos p{
+            font-size: 1.25rem;
+            padding: 10px;
+        }
+        .section-sobrenos2{
+            padding-top: 50px;
+        }
+        .title-sobrenos2{
+            width: 80%;
+            font-size: 1.35rem;
+        }
+        .section-sobrenos3 div h2{
+            width: 60%;
+            font-size: 1.35rem;
+        }
+        .section-sobrenos3 div p{
+            font-size: 1.15rem;
+        }
+        /* PÁGINA SOBRE NÓS */
+        /* ************* SUB MENU EMPRESA ********** */
+
+        /* ************* PAGE CONTATO ********** */
+        .section-form .titleForm h1{
+            font-size: 1.5rem;
+        }
+        
+        .section-contato-info{
+            padding-top: 50px;
+        }
+        .section-contato-info2 .p-contato{
+            width: 90%;
+        }
+        .section-contato-info h1{
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .section-contato-info2 .p-contato p{
+            font-size: 1rem;
+        }
+        .section-contato-info2 .info-contato div p{
+        font-size: 1rem;   
+        }
+
+        /* PAG OBRIGADO */
+        .main-obrigado i{
+            font-size: 6rem;
+        }
+        .main-obrigado h1{
+            width: 70%;
+            font-size: 2rem;
+        }
+        .main-obrigado h2{
+            width: 90%;
+            font-size: 1.4rem;
+        }
+        /* PAG OBRIGADO */
+        /* ************* PAGE CONTATO ********** */
+
+        /********* SUB MENU SOLUÇÕES ***********/
+        .h3-contact-solutions{
+            font-size: 1.35rem;
+        }
+        .p-contact-solutions{
+            font-size: 1.25rem;
+        }
+        .h3-contact-solutions-2{
+            font-size: 1.35rem;
+        }
+        .p-contact-solutions-2{
+            font-size: 1.25rem;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+        .title-main-especializacao{
+            font-size: 1.35rem;
+        }
+        .text-main-especializacao{
+            font-size: 1.15rem;
+            margin-bottom: 80px;
+        }
+        .section-especializacao{
+            padding-top: 130px;
+        }
+        .h1-especializacoes{
+            font-size: 1.35rem;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+
+        
+        /***** PAGE SERVIÇOS *****/
+        .title-main-services{
+            font-size: 1.35rem;
+            margin-bottom: 40px;
+        }
+        .text-main-services{
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        .section-services{
+            padding-top: 130px;
+        }
+        /***** PAGE SERVIÇOS *****/
+    }
+
+
+    @media (min-width: 767px) {
+        /* NAVBAR */
+        .div-logo-nav{
+            width: 30%;
+        }
+
+        /* COOKIE BANNER */
+        .cookie-banner-content{
+            padding-left: 50px;
+        }
+        .cookie-banner-content p{
+            width: 70%;
+            font-size: 1rem;
+        }
+        .cookie-logo{
+            max-width: 130px;
+            display: block;
+        }
+        .btn-accept{
+            font-size: 1rem;
+            padding: 10px 50px;
+            margin-bottom: 20px;
+        }
+        .definition-cookies-banner{
+            right: 5px;
+            width: 60%;
+            bottom: 5px;
+        }
+        /* COOKIE BANNER */   
+
+        /* ************* SUB MENU EMPRESA ********** */
+        /* PÁGINA PRIVACIDADE */
+        /* NÃO NECESSÁRIO ATÉ O MOMENTO */
+        /* PÁGINA PRIVACIDADE */
+
+        /* PÁGINA SOBRE NÓS */
+        .section-sobrenos h1{
+            font-size: 1.45rem;
+        }
+        .section-sobrenos p{
+            font-size: 1.35rem;
+        }
+
+        .title-sobrenos2{
+            font-size: 1.45rem;
+        }
+
+        .section-sobrenos3 div h2{
+            font-size: 1.45rem;
+        }
+        .section-sobrenos3 div p{
+            width: 80%;
+            font-size: 1.25rem;
+        }
+        /* PÁGINA SOBRE NÓS */
+        /* ************* SUB MENU EMPRESA ********** */
+
+        /* ************* PAGE CONTATO ********** */
+        /* NÃO NECESSÁRIO ATÉ O MOMENTO */
+        /* ************* PAGE CONTATO ********** */
+
+        /********* SUB MENU SOLUÇÕES ***********/
+        .button-contact-solutions{
+            width: 65%;
+        }
+        .button-contact-solutions-2{
+            width: 65%;
+        }
+        /********* SUB MENU SOLUÇÕES ***********/
+
+
+        /********* FOOTER *********/
+        /********* FOOTER *********/
+
+
+    }
+    /* Para tablets e telas maiores */
+    @media (max-width: 768px) {
+        body{
+            background: rgb(25, 25, 25) !important;
+        }
+        .section-sobrenos2{
+            padding-top: 75px;
+        }
+
+    }
+    @media (min-width: 800px) {
+        /* NAVBAR */
+        .nav-list{
+           width: 40vw;
+       }
+       .div-logo-nav{
+           width: 27%;
+       }
+       /* NAVBAR */
+
+       /* SLIDER HOME*/
+        .title-slider1{
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        .subtitle-slider1{
+            width: 100%;
+            font-size: 1.6rem;
+        }
+        .slider-description{
+            font-size: 1rem;
+            width: 90%;
+            margin: 20px 0px 40px 0px;
+        }
+       /* SLIDER HOME*/
+       
+       /* ************* SUB MENU EMPRESA ********** */
+       /* PÁGINA PRIVACIDADE */
+       /* NÃO NECESSÁRIO ATÉ O MOMENTO */
+       /* PÁGINA PRIVACIDADE */
+   
+       /* PÁGINA SOBRE NÓS */
+       .section-sobrenos2{
+           padding-top: 100px;
+       }
+        .section-sobrenos h1{
+           font-size: 1.5rem;
+        }
+        .section-sobrenos p{
+           font-size: 1.45rem;
+           
+        }
+        .title-sobrenos2{
+           font-size: 1.5rem;
+        }
+        .section-sobrenos3 div h2{
+           font-size: 1.5rem;
+       }
+       .section-sobrenos3 div p{
+           font-size: 1.35rem;
+       }
+       /* PÁGINA SOBRE NÓS */
+       /* ************* SUB MENU EMPRESA ********** */
+   
+       /* ************* PAGE CONTATO ********** */
+       /* NÃO NECESSÁRIO ATÉ O MOMENTO */
+       /* ************* PAGE CONTATO ********** */
+   
+       /********* SUB MENU SOLUÇÕES ***********/
+       .h3-contact-solutions{
+           font-size: 1.5rem;
+       }
+       .p-contact-solutions{
+           font-size: 1.5rem;
+       }
+       .h3-contact-solutions-2{
+           font-size: 1.5rem;
+       }
+       .p-contact-solutions-2{
+           font-size: 1.5rem;
+       }
+       /* ESPECIALIZACAÇÃO */
+       .title-main-especializacao{
+           font-size: 1.5rem;
+       }
+       .text-main-especializacao{
+           font-size: 1.5rem;
+       }
+       .h1-especializacoes{
+           font-size: 1.5rem;
+       }
+       /* ESPECIALIZACAÇÃO */
+   
+       /* SERVIÇOS */
+       .title-main-services{
+           font-size: 1.5rem;
+       }
+       .text-main-services{
+           font-size: 1.5rem;
+       }
+       /* SERVIÇOS */
+   
+       /* FOOTER */
+       .footer-columns{
+           flex-wrap: nowrap;
+           width: 100%;
+       }
+       
+   
+   }
+}
+
+
+
+@media (orientation: landscape){
+    @media (min-width:568px){
+        /*HEADER*/
+        /* LOGO */
+        .div-logo-nav{
+            width: 40%;
+        }        
+        /* NAVBAR */
+        .nav-list{
+            width: 60vw;
+            gap: 40px;
+            height: 110vh;
+            padding-top: 50px;
+        }
+        /* NAVBAR */
+
+        /*HEADER*/
+        /* SLIDER HOME */
+        .slider-button{
+            font-size: 0.7rem;
+            width: 60%;
+            padding: 5px 10px;
+            margin-top: 5px;
+            margin-bottom: -70px;
+        }
+        .swiper-pagination{
+            padding-bottom: 0px;
+        }
+        /* 1°SLIDER */
+        .main-slide-container-1{    
+            height: 100vh;
+        }
+        .title-slider1{
+            font-size: 1rem;
+            margin: 0;
+        }
+        .subtitle-slider1{
+            font-size: 0.9rem;
+            margin: 0;
+            letter-spacing: 1px;
+            width: 70%;
+        }
+        .slider-description{
+            font-size: 0.65rem;
+            margin: 0;
+            width: 85%;
+            letter-spacing: 1px;
+        }
+        /* 1°SLIDER */
+        /* 2°SLIDER */
+        .main-slide-container-2{
+            height: 100vh;
+        }
+        .title-slider2{
+            font-size: 1rem;
+            margin: 0;
+        }
+        .subtitle-slider2{
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .description-slider2{
+            font-size: 0.65rem;
+            margin: 0;
+            width: 90%;
+        }
+        /* 2°SLIDER */
+        /* 3°SLIDER */
+        .main-slide-container-3{
+            height: 100vh;
+            padding-top: 75px;
+        }
+        .title-slider3{
+            font-size: 1rem;
+            margin: 0;
+        }
+        .subtitle-slider3{
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .service-div-1, .service-div-2, .service-div-3, .service-div-4{
+            height: 25px;
+            padding-top: -5px;
+        }
+        .mini-service-title{
+            font-size: 0.6rem;
+        }
+        /* 3°SLIDER */
+        /* 4°SLIDER */
+        .main-slide-container-4{
+            height: 100vh;
+            padding-top: 20px;
+        }
+        .title-slider4{
+            font-size: 1rem;
+        }
+        .subtitle-slider4{
+            font-size: 0.9rem;
+        }
+        /* 4°SLIDER */
+        /* SLIDER HOME */
+
+        /* PÁGINA PRIVACIDADE */
+        .main-privacidade{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .section-privacidade h1{ 
+            width: 100%;
+            font-size: 1.5rem;       
+        }
+        .div-title-content-privacidade{
+            width: 100%;
+        }
+        .div-content-privacidade{
+            width: 90%;
+        }
+        /* PÁGINA PRIVACIDADE */
+        /* PÁGINA SOBRE NÓS */
+        .section-sobrenos{
+            padding: 5px;
+            padding-top: 40px;
+        }
+        .section-sobrenos h1{
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .section-sobrenos p{
+            width: 100%;    
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .title-sobrenos2{
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        .text-sobrenos2{
+            width: 100%;
+        }
+        .ul-list-sobrenos2{
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .list-sobrenos2{
+            width: 100%;
+        }
+        .div-sobrenos3{
+            flex-wrap: wrap;
+        }
+        .div-sobrenos3 div{
+            width: 80%;
+            height: auto;
+        }
+        .section-sobrenos3 div h2{
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        .section-sobrenos3 div p{
+            width: 100%;
+            font-size: 1rem;
+        }
+        .sobrenos-button{
+            width: 90%;
+        }
+        /* PÁGINA SOBRE NÓS */
+        /* ************* PAGE CONTATO ********** */
+        /* FORMULÁRIO */
+        .mainContato article{
+            flex-wrap: wrap;
+        }
+        .section-form{
+            width: 100%;
+        }
+        .titleForm h1{
+            width: 100%;
+            font-size: 1.25rem;
+        }
+        .mainContato form{
+            width: 175%;        
+        }
+        #checkbox-send-form{
+            transform: scale(1);
+        }
+        #label-checkbox-form{
+            margin-left: 10px;
+            font-size: 0.85rem;
+        }
+        /* FORMULÁRIO */
+
+        /* INFO CONTATO */
+        .section-contato-info{
+            width: 100%;
+        }
+        .section-contato-info h1{
+            font-size: 1.25rem;
+        }
+        .section-contato-info2 .p-contato{
+            width: 100%;
+            
+        }
+        .section-contato-info2 .p-contato p{
+            font-size: 0.9rem;
+            padding: 0;
+        }
+        .section-contato-info2 .info-contato{
+            width: 100%;        
+        }
+        .section-contato-info2 .info-contato div{
+            width: 100%;
+            height: auto;
+        }
+        .section-contato-info2 .info-contato div p{
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+        .link-contato{
+            height: auto;
+        }
+        /* INFO CONTATO */
+        /* PÁGINA OBRIGADO*/
+        .main-obrigado article{
+            padding-top: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .main-obrigado i{
+            font-size: 3rem;
+        }
+        .main-obrigado h1{
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0px;
+        }
+        .main-obrigado h2{
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        /* PÁGINA OBRIGADO*/
+         /********* SUB MENU SOLUÇÕES ***********/
+        /***** PAGE ESPECIALIZAÇÃO *****/
+        .main-especializacao{
+            padding-top: 60px;
+        }
+        .title-main-especializacao{
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        .text-main-especializacao{
+            width: 90%;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+
+        .section-especializacao{
+            padding-top: 115px;
+        }
+        .h1-especializacoes{
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .especializacao-item{
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        .h3-contact-solutions{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .p-contact-solutions{
+            width: 90%;
+            font-size: 1.1rem;
+        }
+        .button-contact-solutions{
+            width: 95%;
+        }
+        .h3-contact-solutions-2{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .p-contact-solutions-2{
+            width: 90%;
+            font-size: 1.1rem;
+        }
+        .button-contact-solutions-2{
+            width: 95%;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+
+
+        /***** PAGE SERVIÇOS *****/    
+        .title-main-services{
+            font-size: 1.2rem;
+            margin-top: -30px;
+            margin-bottom: 15px;
+        }
+        .text-main-services{
+            width: 95%;
+            font-size: 1.05rem;
+            margin-bottom: 0px;
+        }
+        .section-services{
+            padding-top: 125px;
+        }
+        .h1-services{
+            margin-bottom: 0px;
+        }
+        .item-services{
+            width: 85%;
+            height: auto;
+        }
+        
+        /***** PAGE SERVIÇOS *****/
+        /********* SUB MENU SOLUÇÕES ***********/
+
+        /********* PAGE FOOTER *********/
+        .footer-columns{
+            flex-wrap: wrap-reverse;
+        }
+        .footer-column{
+            width: 100%;
+        }
+        /********* PAGE FOOTER *********/
+    }
+    /* Para telas pequenas de laptop ou desktop */
+    @media (min-width: 1024px) {  
+        /*HEADER */
+        .nav-list{
+            padding-top: 100px;
+            gap: 100px;
+        }
+        /*HEADER */
+
+        /* SLIDER HOME */
+        .slider-button{
+            width: 40%;
+            font-size: 1rem;
+            margin: 0;
+            margin: 20px 0px;
+            padding: 10px 20px;
+        }
+        .swiper-pagination{
+            padding-bottom: 75px;
+        }
+        /* 1°SLIDER */
+        .main-slide-container-1{
+            height: auto;
+        }
+        .title-slider1{
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 5px;
+        }
+        .subtitle-slider1{
+            font-size: 1.5rem;
+            width: 90%;
+            margin-bottom: 10px;
+            letter-spacing: 4px;
+        }
+        .slider-description{
+            font-size: 1rem;
+            letter-spacing: 3px;
+        }
+        /* 1°SLIDER */
+        /* 2°SLIDER */
+        .main-slide-container-2{
+            height: auto;
+        }
+        .title-slider2{
+            font-size: 1.8rem;
+        }
+        .subtitle-slider2{
+            font-size: 1.5rem;
+            margin: 20px 0px;
+        }
+        .description-slider2{
+            font-size: 1rem;
+            width: 80%;
+        }
+        /* 2°SLIDER */
+        /* 3°SLIDER */
+        .main-slide-container-3{
+            height: auto;
+            padding-top: 0px;
+        }
+        .title-slider3{
+            font-size: 1.8rem;
+        }
+        .subtitle-slider3{
+            font-size: 1.5rem;
+            width: 70%;
+            margin: 20px 0px;
+        }
+        .service-div-1, .service-div-2, .service-div-3, .service-div-4{
+            height: 115px;
+            padding-top: 0px;
+        }
+        .mini-service-title{
+            font-size: 1.2rem;
+        }
+        .mini-service-description{
+            font-size: 1rem;
+        }
+        /* 3°SLIDER */
+        /* 4°SLIDER */
+        .main-slide-container-4{
+            padding-top: 0;
+            height: auto;
+        }
+        .title-slider4{
+            font-size: 1.8rem;
+        }
+        .subtitle-slider4{
+            font-size: 1.5rem;
+            margin: 20px 0px;
+        }
+        /* 4°SLIDER */
+
+        
+        /* ************* SUB MENU EMPRESA ********** */
+        /* PÁGINA PRIVACIDADE */
+        .main-privacidade{
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .main-privacidade h1{
+            font-size: 2.5rem;
+        }
+        .main-privacidade p{
+            font-size: 1rem;
+        }
+        /* PÁGINA PRIVACIDADE */
+
+        /* PÁGINA SOBRE NÓS */
+        .section-sobrenos2{
+            padding-top: 100px;
+        }
+
+        .section-sobrenos p{
+            font-size: 1.5rem;        
+            margin-bottom: 60px;
+            width: 80%;
+        }
+        .title-sobrenos2{
+            width: 60%;
+        }
+        .text-sobrenos2{
+            width: 90%;
+        }
+        .sobrenos-button{
+            width: 30%;
+        }
+        .section-sobrenos3 div h2{
+            width: 60%;
+        }
+        .section-sobrenos3 div p{
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        /* PÁGINA SOBRE NÓS */
+        /* ************* SUB MENU EMPRESA ********** */
+
+        /* ************* PAGE CONTATO ********** */
+        .mainContato form{
+            width: 160%;
+        }
+        .section-form .titleForm h1{
+            font-size: 1.7rem;
+        }
+        .section-contato-info h1{
+            font-size: 1.7rem;
+        }
+        .section-contato-info2 .p-contato p{
+            font-size: 1.2rem;
+        }
+        .section-contato-info2 .info-contato div p{
+            font-size: 1.2rem;
+        }
+
+        /* PAG OBRIGADO */
+        .main-obrigado i{
+            font-size: 6.5rem;
+        }
+        .main-obrigado h1{
+            font-size: 2.5rem;
+        }
+        .main-obrigado h2{
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+        /* PAG OBRIGADO */
+        /* ************* PAGE CONTATO ********** */
+
+        /********* SUB MENU SOLUÇÕES ***********/
+        .div-button-contact-solutions{
+            padding-top: 50px;
+        }
+        .button-contact-solutions{
+            width: 50%;
+        }
+        .button-contact-solutions-2{
+            width: 50%;
+        }
+        /* ESPECIALIZACAÇÃO */
+        .title-main-especializacao{
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+        }
+        .text-main-especializacao{
+            margin-bottom: 100px;
+            font-size: 1.5rem;
+            width: 80%;
+        }
+        .h1-especializacoes{
+            font-size: 1.5rem;
+        }
+        .especializacao-item {
+            width: 30%;
+        }
+        /* ESPECIALIZACAÇÃO */
+        
+        /* SERVIÇOS */
+        .title-main-services{
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+        }
+        .text-main-services{
+            width: 80%;
+            margin-bottom: 100px;
+            font-size: 1.5rem;
+        }
+        .item-services{
+            width: 45%;
+            height: 280px;
+        }
+        /* SERVIÇOS */
+
+        /* FOOTER */
+        .footer-columns{
+            width: 100%;
+            flex-wrap: nowrap;
+        }
+        .footer-column{
+            width: 25%;
+
+        }
+        .div-logo-footer{
+            padding-left: 50px;
+        }
+        #contact-footer{
+            padding-top: 0px;
+        }
+        #meca-footer{
+            padding-top: 0px;
+        }
+        #gap-social-footer{
+            position: relative;
+        }
+        #social-id-footer{
+            position: absolute;
+            top: 3px;
+        }
+        #contact-id-footer{
+            top: 85px;
+            position: absolute;
+        }
+        /* FOOTER */
+    }
+    @media (min-width: 1025px){
+        .nav-list {
+            width: 70%;
+            gap: 50px;
+            height: auto;
+            padding: 0;
+        }
+        .div-logo-nav{
+            width: 30%;
+            height: auto;
+        }
+        .navbar-logo{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .navbar-logo img{
+            width: 70%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .nav-item {
+            margin: 0 1rem;
+        }
+    }
+
+    @media (min-width:1114px){
+        
+        /* PÁGINA SOBRE NÓS */
+        .div-sobrenos3 div{
+            width: 45%;
+            height: 180px;
+        }
+        .section-sobrenos p{
+            margin: 50px 0px 80px 0px;
+        }
+        /* PÁGINA SOBRE NÓS */
+        /* ESPECIALIZACAÇÃO */
+        .section-main-especializacao{
+            padding-top: 75px;
+        }
+        .text-main-especializacao{
+            width: 60%;
+        }
+        /* ESPECIALIZACAÇÃO */
+        /* SERVIÇOS */
+        .text-main-services{
+            width: 60%;
+        }
+        /* SERVIÇOS */
+    }
+
+    /* Para telas de médio porte de desktop */
+    @media (min-width: 1280px) {
+        .div-logo-nav{
+            width: 27%;
+        }
+        /* SLIDER HOME */
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+        transform: scale(1);
+        }
+        /* 1°SLIDER */
+        .title-slider1{
+            font-size: 2.5rem;
+        }
+        .subtitle-slider1{
+            font-size: 1.8rem;
+            letter-spacing: 5px;
+            width: 70%;
+        }
+        .slider-description{
+            font-size: 1.2rem;
+            width: 85%;
+            margin: 20px 0px;
+            letter-spacing: 5px;
+        }
+        .slider-button{
+            width: 30%;
+            font-size: 1rem;
+            padding: 15px 50px;
+        }
+        /* 1°SLIDER */
+        /* 2°SLIDER */
+        .title-slider2{
+            font-size: 2.1rem;
+        }
+        .subtitle-slider2{
+            font-size: 1.9rem;
+            width: 100%;
+        }
+        .description-slider2{
+            font-size: 1.2rem;
+            width: 80%;
+            margin-bottom: 40px;
+        }
+        /* 2°SLIDER */
+        /* 3°SLIDER */
+        .title-slider3{
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+        .subtitle-slider3{
+            font-size: 1.9rem;
+        }
+        .mini-service-description{
+            font-size: 1.1rem;
+        }
+        /* 3°SLIDER */
+        /* 4°SLIDER */
+        .title-slider4{
+            font-size: 2.5rem;
+        }
+        .subtitle-slider4{
+            font-size: 1.9rem;
+        }
+        /* 4°SLIDER */
+        
+        /* ************* SUB MENU EMPRESA ********** */
+        /* PÁGINA PRIVACIDADE */
+        /* NÃO NECESSÁRIO ATÉ O MOMENTO */
+        /* PÁGINA PRIVACIDADE */
+
+        /* PÁGINA SOBRE NÓS */
+        .section-sobrenos p{
+            width: 65%;
+        }
+        /* PÁGINA SOBRE NÓS */
+        /* ************* SUB MENU EMPRESA ********** */
+
+        /* ************* PAGE CONTATO ********** */
+        .section-form .titleForm h1{
+            font-size: 2rem;
+        }
+        .section-contato-info h1{
+            font-size: 2rem;
+        }
+        .section-contato-info2 .p-contato p{
+            text-align: center;
+            width: 60%;
+        }
+        /* ************* PAGE CONTATO ********** */
+
+    }
+
+    /* Para telas de grande porte de desktop */
+    @media (min-width: 1366px) {
+        .div-logo-nav{
+            width: 23%;
+        }
+        
+        /* ************* PAGE CONTATO ********** */
+        .mainContato article{
+            flex-wrap: nowrap;
+        }
+        .mainContato .section-form{
+            width: 60%;
+        }
+        .mainContato form{
+            width: 100%;
+            height: auto;
+            padding-top: 50px;
+        }
+        .section-contato-info{
+            width: 40%;
+            padding-top: 15px;
+        }
+        .section-contato-info2{
+        }
+        .section-contato-info2 .p-contato{
+            width: 90%;
+        }
+        .section-contato-info2 .p-contato p{
+            width: 90%;
+        }
+        /* ************* PAGE CONTATO ********** */
+
+        /********* SUB MENU SOLUÇÕES ***********/
+        .button-contact-solutions{
+            width: 30%;
+        }
+        .p-contact-solutions{
+            width: 70%;
+        }
+        .button-contact-solutions-2{
+            width: 30%;
+        }
+        /********* SUB MENU SOLUÇÕES ***********/
+    }
+    @media (min-width: 1440px){
+        /* SLIDER HOME */
+        /* 1°SLIDER */
+        .title-slider1{
+            font-size: 2.7rem;
+        }
+        .subtitle-slider1{
+            font-size: 2rem;
+        }
+        /* 1°SLIDER */
+        /* 2°SLIDER */
+        .title-slider2{
+            letter-spacing: 5px;
+        }
+        /* 2°SLIDER */
+
+    }
+
+    @media (min-width: 1560px) {
+        .div-logo-nav{
+            width: 20%;
+            height: auto;
+        }
+
+        /* SLIDER HOME */
+        .slider-button{
+            font-size: 1.1rem;
+        }
+        /*1 ° SLIDER */
+        .title-slider1{
+            font-size: 3rem;
+        }    
+        .subtitle-slider1{
+            font-size: 2.3rem;
+            width: 70%;
+        }
+        .slider-description{
+            font-size: 1.3rem;
+            width: 80%;
+        }
+        /*1 ° SLIDER */
+        /*2 ° SLIDER */
+        .title-slider2{
+            font-size: 2.5rem;
+        }
+        .subtitle-slider2{
+            font-size: 2.2rem;
+        }
+        .description-slider2{
+            font-size: 1.3rem;
+            width: 70%;
+        }
+        /*2 ° SLIDER */
+        /*3 ° SLIDER */
+        .title-slider3{
+            font-size: 2.8rem;
+        }
+        .subtitle-slider3{
+            font-size: 2.1rem;
+        }
+        .mini-service-title{
+            font-size: 1.4rem;
+        }
+        .mini-service-description{
+            font-size: 1.2rem;
+        }
+        /*3 ° SLIDER */
+        /*4 ° SLIDER */
+        .title-slider4{
+            font-size: 2.8rem;
+        }
+        .subtitle-slider4{
+            font-size: 2.1rem;
+        }
+        /*4 ° SLIDER */
+        /* SLIDER HOME */
+        
+        /* ************* SUB MENU EMPRESA ********** */
+        /* SOBRE NÓS */
+        .section-sobrenos h1{
+            font-size: 2.3rem;
+            margin-bottom: 80px;
+        }
+        .section-sobrenos p{
+            font-size: 1.8rem;
+            margin-bottom: 80px;
+        }
+        .section-sobrenos button{
+            font-size: 1.2rem;
+        }
+        .title-sobrenos2{
+            font-size: 2.3rem;
+        }
+        .text-sobrenos2{
+            font-size: 1.2rem;
+        }
+        .ul-list-sobrenos2{
+            font-size: 1.2rem;
+        }
+        .title-sobrenos3{
+            font-size: 1.3rem;
+        }
+        .text-sobrenos3{
+            font-size: 1.15rem;
+        }
+        .section-sobrenos3 div h2{
+            font-size: 2.5rem;
+            width: 90%;
+        }
+        .section-sobrenos3 div p{
+            font-size: 1.2rem;
+            width: 60%;
+        }
+        /* SOBRE NÓS */
+
+        /********* SUB MENU SOLUÇÕES ***********/
+        .h3-contact-solutions{
+            font-size: 2.3rem;
+        }
+        .h3-contact-solutions-2{
+            font-size: 2.3rem;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+        .title-main-especializacao{
+            font-size: 2.3rem;
+            margin-bottom: 80px;
+        }
+        .text-main-especializacao{
+            font-size: 1.8rem;
+        }
+        .button-scrollTo{
+            font-size: 1.2rem;
+        }
+
+        .h1-especializacoes{
+            font-size: 2.3rem;
+        }
+
+        .especializacao-title-item{
+            font-size: 1.3rem;
+        }
+        .especializacao-description-item{
+            font-size: 1rem;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+        /***** PAGE SERVIÇOS *****/
+        .title-main-services{
+            font-size: 2.3rem;
+            margin-bottom: 80px;
+        }
+        .text-main-services{
+            font-size: 1.8rem;
+        }
+        .h1-services{
+            font-size: 2.3rem;
+        }
+        .item-title-services{
+            font-size: 1.4rem;
+        }
+        .item-text-services{
+            font-size: 1.05rem;
+        }
+
+        /***** PAGE SERVIÇOS *****/
+        /********* SUB MENU SOLUÇÕES ***********/
+    }
+
+    /* Para telas muito grandes (ex: monitores 4K) */
+    @media (min-width: 1920px) {
+        /*NAVBAR*/
+        header{
+            height: 150px;
+        }
+        .div-logo-nav{
+            height: auto;
+        }
+        .nav-item{
+            font-size: 1.3rem;
+        }
+        .dropdown-item{
+            font-size: 1.3rem;
+        }
+        .nav-dropdown .dropdown-menu{
+            top: calc(100% + 91px);
+        }
+        .nav-dropdown span{
+            height: 91px;
+            bottom: -91px;
+        }
+
+        /* SLIDER HOME */
+        .slider-button{
+            font-size: 1.2rem;
+        }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+        transform: scale(1.3);
+        }
+        /*1 ° SLIDER */
+        .title-slider1{
+            font-size: 3.2rem;
+        }    
+        .subtitle-slider1{
+            font-size: 2.5rem;
+        }
+        .slider-description{
+            font-size: 1.5rem;
+        }
+        /*1 ° SLIDER */
+        /*2 ° SLIDER */
+        .title-slider2{
+            font-size: 3rem;
+        }
+        .subtitle-slider2{
+            font-size: 2.4rem;
+        }
+        .description-slider2{
+            font-size: 1.4rem;
+        }
+        /*2 ° SLIDER */
+        /*3 ° SLIDER */
+        .title-slider3{
+            font-size: 3rem;
+        }
+        .subtitle-slider3{
+            font-size: 2.3rem;
+        }
+        .mini-service-title{
+            font-size: 1.6rem;
+        }
+        .mini-service-description{
+            font-size: 1.3rem;
+        }
+        /*3 ° SLIDER */
+        /*4 ° SLIDER */
+        .title-slider4{
+            font-size: 3rem;
+        }
+        .subtitle-slider4{
+            font-size: 2.3rem;
+        }
+        /*4 ° SLIDER */
+        /* SLIDER HOME */
+        
+
+        /* ************* SUB MENU EMPRESA ********** */
+        /* PÁGINA PRIVACIDADE */
+        /* NÃO NECESSÁRIO ATÉ O MOMENTO */
+        /* PÁGINA PRIVACIDADE */
+
+        /* PÁGINA SOBRE NÓS */
+        .section-sobrenos{
+            padding-top: 100px;
+        }
+        .section-sobrenos h1{
+            font-size: 2.7rem;
+        }
+        .section-sobrenos p{
+            font-size: 2rem;
+            width: 55%;
+            margin-bottom: 100px;
+        }
+
+        .section-sobrenos button{
+            font-size: 1.4rem;
+        }
+        .title-sobrenos2{
+            font-size: 2.7rem;
+        }
+        .text-sobrenos2{
+            font-size: 1.4rem;
+        }
+        .ul-list-sobrenos2{
+            font-size: 1.4rem;
+        }
+
+        .title-sobrenos3{
+            font-size: 1.5rem;
+        }
+        .text-sobrenos3{
+            font-size: 1.2rem;
+        }
+
+        .section-sobrenos3 div h2{
+            font-size: 2.7rem;
+        }
+        .section-sobrenos3 div p{
+            font-size: 1.4rem;        
+        }
+        /* PÁGINA SOBRE NÓS */
+
+        /* ************* PAGE CONTATO ********** */
+        .mainContato article{
+            margin-top: 100px;
+        }
+
+        /*OBRIGADO*/
+        .main-obrigado i{
+            font-size: 7.5rem;
+        }
+        .main-obrigado h1{
+            font-size: 3rem;
+        }
+        .main-obrigado h2{
+            font-size: 2.3rem;
+        }
+        .main-obrigado article div{
+            width: 60px;
+            height: 60px;
+            padding-left: 50px;
+        }
+        .main-obrigado article div i{
+            font-size: 2.5rem;
+        }
+        .main-obrigado article div span{
+            font-size: 1.6rem;
+        }
+        /*OBRIGADO*/
+
+        /* ************* PAGE CONTATO ********** */
+
+        /********* SUB MENU SOLUÇÕES ***********/
+        .h3-contact-solutions{
+            font-size: 2.5rem;
+        }
+        .p-contact-solutions{
+            font-size: 1.7rem;
+        }
+        .button-contact-solutions{
+            font-size: 1.2rem;
+        }
+        .h3-contact-solutions-2{
+            font-size: 2.5rem;
+        }
+        .p-contact-solutions-2{
+            font-size: 1.7rem;
+        }
+        .button-contact-solutions-2{
+            font-size: 1.2rem;
+        }
+        /***** PAGE ESPECIALIZAÇÃO *****/
+        .section-main-especializacao{
+            padding-top: 125px;
+        }
+        .title-main-especializacao{
+            font-size: 2.5rem;
+            margin-bottom: 100px;
+        }
+        .text-main-especializacao{
+            width: 55%;
+            margin-bottom: 100px;
+        }
+        .button-scrollTo{
+            font-size: 1.3rem;
+        }
+
+        .h1-especializacoes{
+            font-size: 2.5rem;
+        }
+        .especializacao-title-item {
+            font-size: 1.5rem;
+        }
+        .especializacao-description-item {
+            font-size: 1.15rem;
+        }
+        /* ESPECIALIZACAÇÃO */
+
+        /* SERVIÇOS */
+        .section-main-services{
+            padding-top: 125px;
+        }
+        .title-main-services{
+            font-size: 2.5rem;
+            margin-bottom: 100px;
+        }
+        .text-main-services{
+            width: 55%;
+            margin-bottom: 100px;
+        }
+        .h1-services{
+            font-size: 2.5rem;
+        }
+        .item-services{
+            width: 22%;
+            height: 310px;
+        }
+        .item-title-services{
+            font-size: 1.5rem;
+        }
+        .item-text-services{
+            font-size: 1.1rem;
+        }
+        /* SERVIÇOS */
+
+    /********* SUB MENU SOLUÇÕES ***********/
+    }
+
+    @media (min-width: 2559px) {
+        .div-logo-nav{
+            width: 20%;
+        }
+        /* SLIDER HOME */
+        .slider-button{
+            font-size: 1.3rem;
+        }
+        /*1 ° SLIDER */
+        .title-slider1{
+            font-size: 3.5rem;
+        }    
+        .subtitle-slider1{
+            font-size: 2.8rem;
+        }
+        .slider-description{
+            font-size: 1.7rem;
+        }
+        /*1 ° SLIDER */
+        /*2 ° SLIDER */
+        .title-slider2{
+            font-size: 3.2rem;
+        }
+        .subtitle-slider2{
+            font-size: 2.6rem;
+        }
+        .description-slider2{
+            font-size: 1.7rem;
+        }
+        /*2 ° SLIDER */
+        /*3 ° SLIDER */
+        .title-slider3{
+            font-size: 3.2rem;
+        }
+        .subtitle-slider3{
+            font-size: 2.5rem;
+        }
+        .mini-service-title{
+            font-size: 1.8rem;
+        }
+        .mini-service-description{
+            font-size: 1.4rem;
+        }
+        /*3 ° SLIDER */
+        /*4 ° SLIDER */
+        .title-slider4{
+            font-size: 3.2rem;
+        }
+        .subtitle-slider4{
+            font-size: 2.5rem;
+        }
+        /*4 ° SLIDER */
+        /* SLIDER HOME */
+    }
+}
+
+
+
+/***************************** ESPAÇO PARA MEDIA FIM ************************************/
