@@ -221,10 +221,30 @@ function Services(){
                             "@context": "https://schema.org",
                             "@type": "WebPage",
                             "url": "https://www.mecaimportacoes.com.br/solucoes/servicos",
-                            "name": "Serviços | Meca Importações",
-                            "description": "Explore os serviços da Meca Importações, oferecendo soluções completas para otimização de importação, logística e distribuição final, com agilidade e precisão.",
-                            "mainEntityOfPage": "https://www.mecaimportacoes.com.br/solucoes/servicos"
-                        }
+                            "name": "Meca Importações",
+                            "description": "Explore os serviços da Meca Importações em Diadema, oferecendo soluções completas para otimização de importação, logística e distribuição final, com agilidade e precisão.",
+                            "dateModified": "2025-02-17",
+                            "address": {
+                                    "@type": "PostalAddress",
+                                    "streetAddress": "Rua Regente Feijó, 166",
+                                    "addressLocality": "Diadema",
+                                    "addressRegion": "SP",
+                                    "postalCode": "09910-770",
+                                    "addressCountry": "BR"
+                                },
+                                "contactPoint": {
+                                    "@type": "ContactPoint",
+                                    "telephone": "+55 11 97071-8680",
+                                    "contactType": "customer service",
+                                    "availableLanguage": "Portuguese"
+                                },
+                                "sameAs": [
+                                    "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true",
+                                    "https://www.instagram.com/mecaimportacoes",
+                                ]
+                        }       
+
+                         
                     `}
                 </script>
 

@@ -203,14 +203,32 @@ function Home(){
                     "url": "https://www.mecaimportacoes.com.br/",
                     "name": "Meca Importações",
                     "description": "Bem-vindo à Meca Importações, referência em componentes eletrônicos e soluções inovadoras para o seu negócio.",
-                    "dateModified": "2024-12-22"
+                    "dateModified": "2024-12-22",
+                    "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "Rua Regente Feijó, 166",
+                            "addressLocality": "Diadema",
+                            "addressRegion": "SP",
+                            "postalCode": "09910-770",
+                            "addressCountry": "BR"
+                        },
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "telephone": "+55 11 97071-8680",
+                            "contactType": "customer service",
+                            "availableLanguage": "Portuguese"
+                        },
+                        "sameAs": [
+                            "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true",
+                            "https://www.instagram.com/mecaimportacoes",
+                        ]
                 }
                 `}
                 </script>
 
                 {/* Metadados para SEO e redes sociais */}
                 <title>Home | Meca Importações</title>
-                <meta name="description" content="Conheça a Meca Importações, especializada na distribuição de componentes eletrônicos e soluções inovadoras para empresas." />
+                <meta name="description" content="Conheça a Meca Importações em Diadema, especializada na distribuição de componentes eletrônicos e soluções inovadoras para empresas." />
                 <meta name="robots" content="index, follow" />
                 <meta name="keywords" content="Meca Importações, Componentes, Componentes eletrônicos, Distribuição, Importação, Importação de componentes eletrônicos" />
                 <meta name="author" content="Meca Importações" />

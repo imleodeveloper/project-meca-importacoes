@@ -259,23 +259,24 @@ function SobreNos(){
                         "@context": "https://schema.org",
                         "@type": "Organization",
                         "name": "Meca Importações",
-                        "url": "https://www.mecaimportacoes.com.br/sobre-nos",
-                        "description": "Conheça a Meca Importações, referência em componentes eletrônicos, oferecendo soluções inovadoras e suporte especializado para seus projetos.",
+                        "url": "https://www.mecaimportacoes.com.br/empresa/sobre-nos",
+                        "description": "Conheça a Meca Importações, referência em componentes eletrônicos em Diadema, oferecendo soluções inovadoras e suporte especializado para seus projetos.",
                         "sameAs": [,
-                            "https://www.instagram.com/mecaimportacoes"
+                            "https://www.instagram.com/mecaimportacoes",
+                            "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true"
                         ],
                         "contactPoint": {
                             "@type": "ContactPoint",
-                            "telephone": "+55-11-957001041",
+                            "telephone": "+5511970718680",
                             "contactType": "Customer Service",
                             "areaServed": "BR",
                             "availableLanguage": "Portuguese"
                         },
                         "address": {
                             "@type": "PostalAddress",
-                            "streetAddress": "Rua Exemplo, 123",
+                            "streetAddress": "Rua Regente Feijó, 166",
                             "addressLocality": "São Paulo",
-                            "postalCode": "12345-678",
+                            "postalCode": "09910-770",
                             "addressCountry": "BR"
                         }
                     }
