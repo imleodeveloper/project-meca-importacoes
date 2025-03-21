@@ -67,9 +67,6 @@ function Obrigado(){
 
                 {/* Metadados para SEO e redes sociais */}
                 <title>Obrigado | Meca Importações</title>
-                <meta name="description" content="Obrigado por entrar em contato com a Meca Importações. Estamos à disposição para fornecer mais informações." />
-                <meta name="robots" content="index, follow" />
-                <meta name="keywords" content="Meca Importações, Componentes, Componentes eletrônicos, Distribuição, Importação, Importação de componentes eletrônicos" />
                 <meta property="og:title" content="Obrigado | Meca Importações" />
                 <meta property="og:description" content="Agradecemos pelo seu contato. Nossa equipe retornará em breve com as informações solicitadas." />
                 <meta property="og:type" content="website" />

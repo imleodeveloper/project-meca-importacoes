@@ -121,9 +121,6 @@ function Contato(){
 
                 {/* Metadados para SEO e redes sociais */}
                 <title>Contato | Meca Importações</title>
-                <meta name="description" content="Entre em contato com a Meca Importações para esclarecimentos, dúvidas ou mais informações sobre nossos produtos e serviços." />
-                <meta name="keywords" content="Meca Importações, Componentes, Componentes eletrônicos, Distribuição, Importação, Importação de componentes eletrônicos" />
-                <meta name="robots" content="index, follow" />
                 <meta property="og:title" content="Contato | Meca Importações" />
                 <meta property="og:description" content="Entre em contato com a Meca Importações para mais informações sobre nossos produtos e serviços." />
                 <meta property="og:type" content="website" />

@@ -285,9 +285,6 @@ function SobreNos(){
 
                 {/* Metadados para SEO e redes sociais */}
                 <title>Sobre Nós | Meca Importações</title>
-                <meta name="description" content="Conheça a Meca Importações, referência em componentes eletrônicos, oferecendo soluções inovadoras e suporte especializado para seus projetos." />
-                <meta name="robots" content="index, follow" />
-                <meta name="keywords" content="Meca Importações, Componentes, Componentes eletrônicos, Distribuição, Importação, Importação de componentes eletrônicos" />
                 <meta property="og:title" content="Sobre Nós | Meca Importações" />
                 <meta property="og:description" content="Saiba mais sobre a Meca Importações e nossa missão de oferecer soluções eficientes e inovadoras em componentes eletrônicos." />
                 <meta property="og:type" content="website" />

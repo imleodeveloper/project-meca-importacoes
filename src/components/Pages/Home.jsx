@@ -1,5 +1,6 @@
 //import { useState , useEffect , useRef } from "react";
 //import { Link } from "react-router-dom";
+
 import '../../css/index.css';
 
 
@@ -190,7 +191,8 @@ function Home(){
             observer.disconnect();
         };
     }, []);
-    
+
+
     return(
         <article className="articleHome">
             <Helmet>
@@ -228,10 +230,6 @@ function Home(){
 
                 {/* Metadados para SEO e redes sociais */}
                 <title>Home | Meca Importações</title>
-                <meta name="description" content="Conheça a Meca Importações em Diadema, especializada na distribuição de componentes eletrônicos e soluções inovadoras para empresas." />
-                <meta name="robots" content="index, follow" />
-                <meta name="keywords" content="Meca Importações, Componentes, Componentes eletrônicos, Distribuição, Importação, Importação de componentes eletrônicos" />
-                <meta name="author" content="Meca Importações" />
                 <meta property="og:title" content="Home | Meca Importações" />
                 <meta property="og:description" content="Distribuímos excelência em componentes eletrônicos para o mercado brasileiro, conectando inovação e confiança." />
                 <meta property="og:type" content="website" />

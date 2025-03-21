@@ -250,9 +250,6 @@ function Services(){
 
                 {/* Metadados para SEO e redes sociais */}
                 <title>Serviços | Meca Importações</title>
-                <meta name="description" content="Explore nossos serviços para otimizar o processo de importação, logística e distribuição de produtos, com foco em agilidade e precisão." />
-                <meta name="robots" content="index, follow" />
-                <meta name="keywords" content="Meca Importações, Componentes, Componentes eletrônicos, Distribuição, Importação, Importação de componentes eletrônicos" />
                 <meta property="og:title" content="Serviços | Meca Importações" />
                 <meta property="og:description" content="Descubra as soluções completas da Meca Importações para importar, armazenar e distribuir seus produtos com eficiência e segurança." />
                 <meta property="og:type" content="website" />

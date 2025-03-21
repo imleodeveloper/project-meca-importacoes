@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import gsap from "gsap";
@@ -123,7 +123,7 @@ function Especializacao(){
         return () => {
             forMedia.revert(); // Remove os listeners para evitar conflitos
         };
-    }, []);   
+    });   
     //SEGUNDA SECTION DA PÁGINA ESPECIALIZAÇÃO  ******* COM MEDIA
 
 
@@ -166,9 +166,6 @@ function Especializacao(){
 
                 {/* Metadados para SEO e redes sociais */}
                 <title>Especialização | Meca Importações</title>
-                <meta name="description" content="Conheça as especializações da Meca Importações em automação industrial, circuitos integrados, inteligência artificial, e outras soluções inovadoras." />
-                <meta name="robots" content="index, follow" />
-                <meta name="keywords" content="Meca Importações, Componentes, Componentes eletrônicos, Distribuição, Importação, Importação de componentes eletrônicos" />
                 <meta property="og:title" content="Especializações | Meca Importações" />
                 <meta property="og:description" content="Descubra nossas soluções em automação industrial, circuitos integrados e outras áreas de inovação tecnológica." />
                 <meta property="og:type" content="website" />

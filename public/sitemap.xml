@@ -7,14 +7,6 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-<<<<<<< HEAD
-<url>
-  <loc>https://www.mecaimportacoes.com.br/</loc>
-  <lastmod>2025-01-16T17:35:38+00:00</lastmod>
-</url>
-
-
-=======
     <url>
         <loc>https://www.mecaimportacoes.com.br/</loc>
         <lastmod>2025-01-16T17:35:38+00:00</lastmod>
@@ -57,5 +49,4 @@
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
->>>>>>> eed874b (Finalização Projeto - Meca Importações)
 </urlset>

@@ -330,9 +330,6 @@ function Privacidade(){
 
                 {/* Metadados para SEO e redes sociais */}
                 <title>Política de Privacidade | Meca Importações</title>
-                <meta name="description" content="Confira a Política de Privacidade da Meca Importações e saiba como protegemos seus dados e informações pessoais." />
-                <meta name="keywords" content="Meca Importações, política de privacidade, proteção de dados, segurança, privacidade, dados pessoais, transparência, termos de uso, Componentes, Componentes eletrônicos, Distribuição, Importação, Importação de componentes eletrônicos" />
-                <meta name="robots" content="index, follow" />
                 <meta property="og:title" content="Política de Privacidade | Meca Importações" />
                 <meta property="og:description" content="Confira a Política de Privacidade da Meca Importações." />
                 <meta property="og:type" content="website" />
