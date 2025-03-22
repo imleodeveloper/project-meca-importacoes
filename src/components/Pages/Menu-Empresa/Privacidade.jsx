@@ -305,7 +305,7 @@ function Privacidade(){
                     "url": "https://www.mecaimportacoes.com.br/empresa/privacidade",
                     "name": "Meca Importações",
                     "description": "Descrição completa da Política de Privacidade da Meca Importações.",
-                    "dateModified": "2025-02-17",
+                    "dateModified": "2025-03-22",
                     "address": {
                             "@type": "PostalAddress",
                             "streetAddress": "Rua Regente Feijó, 166",
@@ -322,9 +322,10 @@ function Privacidade(){
                         },
                         "sameAs": [
                             "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true",
-                            "https://www.instagram.com/mecaimportacoes",
+                            "https://www.instagram.com/mecaimportacoes"
                         ]
-                }                
+                    } 
+                }    
                 `}
                 </script>
 

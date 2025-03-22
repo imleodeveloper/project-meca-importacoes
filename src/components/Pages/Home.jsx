@@ -205,7 +205,7 @@ function Home(){
                     "url": "https://www.mecaimportacoes.com.br/",
                     "name": "Meca Importações",
                     "description": "Bem-vindo à Meca Importações, referência em componentes eletrônicos e soluções inovadoras para o seu negócio.",
-                    "dateModified": "2024-12-22",
+                    "dateModified": "2025-03-22",
                     "address": {
                             "@type": "PostalAddress",
                             "streetAddress": "Rua Regente Feijó, 166",
@@ -222,8 +222,9 @@ function Home(){
                         },
                         "sameAs": [
                             "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true",
-                            "https://www.instagram.com/mecaimportacoes",
+                            "https://www.instagram.com/mecaimportacoes"
                         ]
+                    }   
                 }
                 `}
                 </script>

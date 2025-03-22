@@ -89,33 +89,32 @@ function Contato(){
                 <script type="application/ld+json">
                     {`
                     {
-                    "@context": "https://schema.org",
-                    "@type": "WebPage",
-                    "url": "https://www.mecaimportacoes.com.br/contato",
-                    "name": "Meca Importações",
-                    "description": "Entre em contato com a Meca Importações para esclarecer suas dúvidas, fazer perguntas ou obter mais informações sobre nossos produtos e serviços.",
-                    "dateModified": "2025-02-17",
-                    "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "Rua Regente Feijó, 166",
-                            "addressLocality": "Diadema",
-                            "addressRegion": "SP",
-                            "postalCode": "09910-770",
-                            "addressCountry": "BR"
-                        },
-                        "contactPoint": {
-                            "@type": "ContactPoint",
-                            "telephone": "+55 11 97071-8680",
-                            "contactType": "customer service",
-                            "availableLanguage": "Portuguese"
-                        },
-                        "sameAs": [
-                            "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true",
-                            "https://www.instagram.com/mecaimportacoes"
-                        ]
-                    }        
-
-                    
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "url": "https://www.mecaimportacoes.com.br/contato",
+                        "name": "Meca Importações",
+                        "description": "Entre em contato com a Meca Importações para esclarecer suas dúvidas, fazer perguntas ou obter mais informações sobre nossos produtos e serviços.",
+                        "dateModified": "2025-03-22",
+                        "address": {
+                                "@type": "PostalAddress",
+                                "streetAddress": "Rua Regente Feijó, 166",
+                                "addressLocality": "Diadema",
+                                "addressRegion": "SP",
+                                "postalCode": "09910-770",
+                                "addressCountry": "BR"
+                            },
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "telephone": "+55 11 97071-8680",
+                                "contactType": "customer service",
+                                "availableLanguage": "Portuguese"
+                            },
+                            "sameAs": [
+                                "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true",
+                                "https://www.instagram.com/mecaimportacoes"
+                            ]
+                        }
+                    }                            
                     `}
                 </script>
 

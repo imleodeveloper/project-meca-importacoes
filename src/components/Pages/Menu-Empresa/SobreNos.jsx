@@ -261,24 +261,26 @@ function SobreNos(){
                         "name": "Meca Importações",
                         "url": "https://www.mecaimportacoes.com.br/empresa/sobre-nos",
                         "description": "Conheça a Meca Importações, referência em componentes eletrônicos em Diadema, oferecendo soluções inovadoras e suporte especializado para seus projetos.",
-                        "sameAs": [,
-                            "https://www.instagram.com/mecaimportacoes",
-                            "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true"
-                        ],
-                        "contactPoint": {
-                            "@type": "ContactPoint",
-                            "telephone": "+5511970718680",
-                            "contactType": "Customer Service",
-                            "areaServed": "BR",
-                            "availableLanguage": "Portuguese"
-                        },
+                        "dateModified": "2025-03-22",
                         "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "Rua Regente Feijó, 166",
-                            "addressLocality": "São Paulo",
-                            "postalCode": "09910-770",
-                            "addressCountry": "BR"
-                        }
+                                "@type": "PostalAddress",
+                                "streetAddress": "Rua Regente Feijó, 166",
+                                "addressLocality": "Diadema",
+                                "addressRegion": "SP",
+                                "postalCode": "09910-770",
+                                "addressCountry": "BR"
+                            },
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "telephone": "+55 11 97071-8680",
+                                "contactType": "customer service",
+                                "availableLanguage": "Portuguese"
+                            },
+                            "sameAs": [
+                                "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true",
+                                "https://www.instagram.com/mecaimportacoes"
+                            ]
+                        }   
                     }
                 `}
                 </script>

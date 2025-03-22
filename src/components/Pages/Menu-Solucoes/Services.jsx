@@ -223,7 +223,7 @@ function Services(){
                             "url": "https://www.mecaimportacoes.com.br/solucoes/servicos",
                             "name": "Meca Importações",
                             "description": "Explore os serviços da Meca Importações em Diadema, oferecendo soluções completas para otimização de importação, logística e distribuição final, com agilidade e precisão.",
-                            "dateModified": "2025-02-17",
+                            "dateModified": "2025-03-22",
                             "address": {
                                     "@type": "PostalAddress",
                                     "streetAddress": "Rua Regente Feijó, 166",
@@ -240,10 +240,10 @@ function Services(){
                                 },
                                 "sameAs": [
                                     "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true",
-                                    "https://www.instagram.com/mecaimportacoes",
+                                    "https://www.instagram.com/mecaimportacoes"
                                 ]
-                        }       
-
+                            }   
+                        }
                          
                     `}
                 </script>

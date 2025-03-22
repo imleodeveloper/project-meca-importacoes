@@ -139,7 +139,7 @@ function Especializacao(){
                             "url": "https://www.mecaimportacoes.com.br/solucoes/especializacao",
                             "name": "Meca Importações",
                             "description": "Descubra as especializações da Meca Importações, oferecendo soluções inovadoras em automação industrial, circuitos integrados, inteligência artificial, e muito mais em Diadema.",
-                            "dateModified": "2025-02-17",
+                            "dateModified": "2025-03-22",
                             "address": {
                                     "@type": "PostalAddress",
                                     "streetAddress": "Rua Regente Feijó, 166",
@@ -156,10 +156,10 @@ function Especializacao(){
                                 },
                                 "sameAs": [
                                     "https://www.linkedin.com/company/meca-importações/about/?viewAsMember=true",
-                                    "https://www.instagram.com/mecaimportacoes",
+                                    "https://www.instagram.com/mecaimportacoes"
                                 ]
-                        }        
-                                            
+                            }   
+                        }                 
                     
                     `}
                 </script>
