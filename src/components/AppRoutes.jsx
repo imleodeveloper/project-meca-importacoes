@@ -10,6 +10,8 @@ import Contato from "./Pages/Contato";
 import Obrigado from "./Pages/Obrigado";
 import Especializacao from "./Pages/Menu-Solucoes/Especializacao";
 import Services from "./Pages/Menu-Solucoes/Services";
+import Blog from "./Pages/Blog";
+import Processos_De_Importacao from "./Pages/Menu-Blog/Processos_De_Importacao";
 /* PAGES */
 
 function AppRoutes(){
@@ -32,6 +34,10 @@ function AppRoutes(){
                     <Route path="/solucoes/especializacao" element={<Especializacao />} />
                     <Route path="/solucoes/servicos" element={<Services />} />                   
                     {/* SUB MENU SOLUÇÕES */}
+
+
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/processos-de-importacao" element={<Processos_De_Importacao />} />
 
                 {/* PAGES */}
 

@@ -1685,6 +1685,337 @@ nav{
 
 /****************** PÁGINA CONTATO FIM **************************/
 
+/****************** BLOG ÍNICIO **************************/
+.article-blog{
+    width: 100%;
+    height: auto;
+    padding-top: 150px;
+    background: rgb(32,32,32);
+    background: linear-gradient(90deg, rgba(32,32,32,1) 20%, rgba(37,37,37,1) 40%, rgba(53,53,53,1) 65%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.article-blog h1{
+    font-size: 2.5rem;
+    color: #0059ff;
+    width: 100%;
+    height: auto;
+    padding: 30px 0px 0px 30px;
+    
+}
+.article-blog .section-blog{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    padding: 50px 30px;
+    gap: 10px;
+
+}
+.article-blog .section-blog .metadata{
+    width: 100%;
+    height: auto;
+    color: #fff;
+    font-weight: bold;
+}
+.article-blog .section-blog .link-blog{
+    text-decoration: none;
+}
+
+.article-blog .section-blog .item-g{
+    width: 48%;
+    min-height: 700px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    overflow: hidden;
+    padding: 0px 20px;
+    border-right: 1px solid #0059ff;
+}
+.article-blog .section-blog .item-g .img-item-g{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.article-blog .section-blog .item-g .img-item-g img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+.article-blog .section-blog .item-g .img-item-g img:hover{
+    transform: scale(1.2);
+}
+.article-blog .section-blog .item-g h2{
+    font-size: 2rem;
+    color: #0059ff;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.article-blog .section-blog .item-g h2::after{
+    width: 100px;
+    height: 2px;
+    background: #0059ff;
+    opacity: 0.7;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    content: ' ';
+}
+.article-blog .section-blog .link-blog:hover h2{
+    text-decoration: underline;
+    position: unset;
+}
+.article-blog .section-blog .item-g p{
+    width: 100%;
+    height: auto;
+    color: #fff;
+}
+
+
+.article-blog .section-blog .itens-p{
+    width: 47%;
+    min-height: 700px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    max-width: 700px;
+    border-right: 1px solid #0059ff;
+}
+.article-blog .section-blog .itens-p .item-p{
+    width: 50%;
+    height: 100%;
+    padding: 0px 20px;
+}
+.article-blog .section-blog .itens-p .item-p .img-item-p{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.article-blog .section-blog .itens-p .item-p .img-item-p img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+.article-blog .section-blog .itens-p .item-p .img-item-p img:hover{
+    transform: scale(1.07);
+}
+.article-blog .section-blog .itens-p .item-p h2{
+    width: 100%;
+    height: auto;
+    font-size: 1.3rem;
+    color: #0059ff;
+    position: relative;
+}
+.article-blog .section-blog .itens-p .item-p h2::after{
+    width: 100px;
+    height: 2px;
+    background: #0059ff;
+    opacity: 0.7;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    content: ' ';
+}
+.article-blog .section-blog .itens-p .item-p p{
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.article-blog .section-blog .button-view-more{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 20px;
+}
+.article-blog .section-blog .button-view-more button{
+    width: 100px;
+    height: auto;
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', "Roboto", 'Trebuchet MS', Arial, Helvetica, sans-serif;;
+    border: solid 1px #0059ff;
+    padding: 0px 0px;
+    color: #0059ff;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: 900;
+    z-index: 100;
+    animation: subirFrase 0.5s ease-out forwards;
+}
+.article-blog .section-blog .button-view-more button::before {
+    content: "";
+    position: absolute;
+    top: -200%;
+    left: -300%; 
+    width: 300%; 
+    height: 300%; 
+    background-color: #0059ff; 
+    transform: rotate(-10deg); 
+    z-index: -1; 
+    transition: top 0.4s ease-in, left 0.2s linear;
+}
+
+/* Apenas ativa o hover */
+.article-blog .section-blog .button-view-more button:hover::before {
+    top: 100%;
+    left: 0;
+}
+
+/* Remove a transição quando o mouse sai */
+.article-blog .section-blog .button-view-more button:not(:hover)::before {
+    transition: none;
+    top: -200%;
+    left: -300%;
+}
+
+
+/****************** BLOG ÍNICIO **************************/
+
+/** PROCESSOS BLOG **/
+.processosBlog-article{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 150px 0px;
+    background: rgb(32,32,32);
+    background: linear-gradient(90deg, rgba(32,32,32,1) 20%, rgba(37,37,37,1) 40%, rgba(53,53,53,1) 65%);
+}
+.processosBlog-article h1{
+    color: #0059ff;
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+.processosBlog-article .social-blog{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.processosBlog-article .social-blog span{
+    color: #fff;
+    font-size: 1.5rem;
+}
+.processosBlog-article .social-blog ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.processosBlog-article .social-blog ul li{
+    font-size: 1.5rem;
+    color: #fff;
+    list-style: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0059ff;
+    cursor: pointer;
+}
+.processosBlog-article .social-blog ul li a{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.processosBlog-article .social-blog ul li:nth-child(1) a:hover{
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+.processosBlog-article .social-blog ul li:nth-child(2) a:hover{
+    background: #0077B5;
+}
+
+.processosBlog-article section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    flex-direction: column;
+}
+.processosBlog-article section .img-processos{
+    width: 80%;
+    height: 500px;
+    overflow: hidden;
+
+}
+.processosBlog-article section .img-processos img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+
+}
+.processosBlog-article section .img-processos img:hover{
+    transform: scale(1.1);
+}
+.processosBlog-article section p{
+    width: 80%;
+    height: auto;
+    padding-top: 50px;
+    color: #fff;
+}
+.processosBlog-article section div{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-bottom: 50px;
+}
+.processosBlog-article section div h2{
+    width: 100%;    
+    height: auto;
+    color: #0059ff;
+}
+.processosBlog-article section div p{
+    padding: unset;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+}
+.processosBlog-article section div ul{
+    width: 100%;
+    height: auto;
+    color: #fff;
+}
+/** PROCESSOS BLOG **/
+
 
 
 /****************** PÁGINA ESPECIALIZAÇÃO E SERVIÇOS INICIO **************************/
@@ -4176,11 +4507,13 @@ html {
         }
         
         /* ************* PAGE CONTATO ********** */
+        
         .mainContato article{
             flex-wrap: nowrap;
         }
         .mainContato .section-form{
             width: 60%;
+            max-width: 800px;
         }
         .mainContato form{
             width: 100%;
@@ -4189,6 +4522,7 @@ html {
         }
         .section-contato-info{
             width: 40%;
+            max-width: 600px;
             padding-top: 15px;
         }
         .section-contato-info2{

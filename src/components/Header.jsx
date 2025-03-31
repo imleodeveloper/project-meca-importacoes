@@ -103,6 +103,13 @@ function Header(){
                             className={`nav-link ${locationURL.pathname === '/contato' ? 'active' : ''}`}
                             onClick={closeMobileMenu}>Contato</Link>
                     </li>
+
+                    <li className="nav-item">
+                        <Link 
+                            to="/blog" 
+                            className={`nav-link ${locationURL.pathname === '/blog' ? 'active' : ''}`}
+                            onClick={closeMobileMenu}>Blog</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

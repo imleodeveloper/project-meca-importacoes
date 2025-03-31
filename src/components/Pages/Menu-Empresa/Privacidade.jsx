@@ -12,7 +12,7 @@ function Privacidade(){
         {
             title: "Interpretação e Definições:",
             description: (
-                <>
+                `
                     <h3>Interpretação</h3>
                     <p>
                         As palavras cuja letra inicial está em maiúscula têm significados definidos nas seguintes condições. 
@@ -62,13 +62,13 @@ function Privacidade(){
                             <p><strong>Você</strong> significa o indivíduo que acessa ou usa o Serviço, ou a empresa, ou outra entidade legal em nome da qual tal indivíduo está acessando ou usando o Serviço, conforme aplicável.</p>
                         </li>
                     </ul>
-                </>
+                `
             ),
     },
     {
         title: "Coleta e Uso de Seus Dados Pessoais:",
         description: (
-            <>
+            `
                 <h3>Tipos de Dados Coletados</h3>
                 <h4>Dados Pessoais</h4>
                 <p>Enquanto utiliza nosso Serviço, podemos solicitar que você nos forneça certas informações pessoalmente identificáveis que podem ser usadas para contatá-lo ou identificá-lo. Informações pessoalmente identificáveis podem incluir, mas não se limitam a:</p>
@@ -188,44 +188,44 @@ function Privacidade(){
                 <h3>Segurança de Seus Dados Pessoais</h3>
                 <p>A segurança de seus Dados Pessoais é importante para nós, mas lembre-se de que nenhum método de transmissão pela Internet ou método de armazenamento eletrônico é 100% seguro. Embora nos esforcemos para usar meios comercialmente aceitáveis para proteger seus Dados Pessoais, não podemos garantir sua segurança absoluta.</p>
 
-            </>
+            `
         ),
     },
     {
         title: "Privacidade das Crianças:",
         description: (
-            <>
+            `
                 <p>Nosso Serviço não é dirigido a ninguém com menos de 13 anos de idade. Não coletamos informações pessoalmente identificáveis de ninguém nesta faixa etária. 
                     Se você é um pai ou tutor e está ciente de que seu filho nos forneceu Dados Pessoais, por favor, entre em contato conosco. Se nos tornarmos cientes de que coletamos Dados Pessoais de alguém com menos de 13 anos sem verificação de consentimento parental, tomaremos medidas para remover essas informações de nossos servidores.
                 </p>
                 <p>Se precisarmos depender do consentimento como base legal para processar suas informações e seu país exigir consentimento de um pai, poderemos exigir o consentimento deste tutor antes de coletar e usar essas informações.</p>
-            </>
+            `
         ),
     },
     {
         title: "Links para Outros Sites:",
         description: (
-            <>
+            `
                 <p>Nosso Serviço pode conter links para outros sites que não são operados por nós. Se você clicar em um link de terceiros, será direcionado para o respectivo site. Recomendamos fortemente que você revise a Política de Privacidade de cada site que visitar.</p>
                 <p>Não temos controle sobre outros sites e não assumimos nenhuma responsabilidade pelo conteúdo, políticas de privacidade ou práticas de qualquer site ou serviço de terceiros.</p>
-            </>
+            `
         ),
 
     },
     {
         title: "Alterações a Esta Política de Privacidade:",
         description: (
-            <>
+            `
                 <p>Podemos atualizar nossa Política de Privacidade de tempos em tempos e publicaremos a nova nesta página.</p>
                 <p>Informaremos você por e-mail e/ou por um aviso destacado em nosso Serviço, antes que a mudança se torne efetiva e faremos a alteração da data de "Última atualização" no topo desta Política de Privacidade.</p>
                 <p>Você é aconselhado a revisar esta Política de Privacidade periodicamente para quaisquer mudanças. As mudanças a esta Política de Privacidade são efetivas quando são publicadas nesta página.</p>
-            </>
+            `
         ),
     },
     {
         title: "Contate-Nos:",
         description: (
-            <>
+            `
                 <p>
                     A Meca Importações está comprometida em atender suas solicitações e esclarecer qualquer dúvida relacionada 
                     a esta Política de Privacidade. Nosso objetivo é garantir a transparência no tratamento dos seus dados pessoais.
@@ -260,7 +260,7 @@ function Privacidade(){
                     A Meca Importações está comprometida em respeitar seus direitos em conformidade com as leis 
                     de proteção de dados vigentes.
                 </p>
-            </>
+            `
         ),
     },];
 
