@@ -1,6 +1,7 @@
 import item1 from "../../img/blog/processos-de-importacao.webp";
-import item2 from "../../img/blog/importacao-de-componentes.webp";
+import item2 from "../../img/blog/microcontroladores.webp";
 import item3 from "../../img/blog/o-que-sao-componentes.webp";
+import item4 from "../../img/blog/inteligencia-artificial.webp";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
@@ -34,7 +35,67 @@ const Blog = () => {
                         </span>
                     </Link>
                 </div>
-                <div className="itens-p">                    
+                <div className="item-g">
+                    <Link to="/blog/o-que-sao-componentes-eletronicos" className="link-blog">
+                        <div className="img-item-g">
+                            <img src={item3}/>
+                        </div>
+                        <h2>O que são componentes eletrônicos?</h2>
+                        <p>
+                            <strong>Componentes eletrônicos</strong> são peças fundamentais em dispositivos tecnológicos, 
+                            como <strong>resistores</strong>, <strong>capacitores</strong> e <strong>microchips</strong>, que controlam o fluxo de eletricidade, 
+                            armazenam energia e processam sinais, sendo essenciais para a criação de produtos 
+                            eletrônicos.
+                        </p>
+                        <span className="metadata">31 Mar 2025</span>
+                        <span className="button-view-more">
+                            <button>Ver mais</button>
+                        </span>
+                    </Link>
+                </div>
+                <div className="item-g">
+                    <Link to="/blog/microcontroladores" className="link-blog">
+                        <div className="img-item-g">
+                            <img src={item2}/>
+                        </div>
+                        <h2>Microcontroladores o coração da internet das coisas (IoT)!</h2> 
+                        <p>
+                            A importação de <strong>componentes eletrônicos</strong>, como microcontroladores, 
+                            exige um planejamento cuidadoso. É fundamental ter conhecimento sobre 
+                            <strong> fornecedores</strong>, <strong>tributação</strong> e <strong>logística </strong>
+                            para garantir a eficiência do processo. Com uma abordagem estratégica, é possível 
+                            minimizar custos, evitar imprevistos e assegurar a entrega de produtos de alta qualidade, 
+                            mantendo a competitividade no mercado.
+                        </p>
+                        <span className="metadata">16 Abr 2025</span>
+                        <span className="button-view-more">
+                            <button>Ver mais</button>
+                        </span>
+                    </Link>
+                </div>
+                <div className="item-g">
+                    <Link to="/blog/inteligencia-artificial" className="link-blog">
+                        <div className="img-item-g">
+                            <img src={item4}/>
+                        </div>
+                        <h2>Inteligência artificial</h2>
+                        <p>
+                            A <strong>Inteligência artificial</strong> vem revolucionando a eletrônica: 
+                            <strong> sensores e microcontroladores</strong> estão cada vez mais inteligentes, 
+                            <strong> circuitos são otimizados automaticamente</strong> e a 
+                            <strong> produção industrial se torna mais precisa com IA</strong>. 
+                            Isso se reflete em <strong>produtos mais duráveis, eficientes e modernos</strong> — 
+                            desde eletrônicos de consumo até veículos autônomos.
+                            <br/>A <strong>Meca Importações</strong> está sempre atualizada com as tendências para 
+                            trazer o <strong>melhor em componentes eletrônicos</strong>!
+                        </p>
+                        <span className="metadata">22 Abr 2025</span>
+                        <span className="button-view-more">
+                            <button>Ver mais</button>
+                        </span>
+                    </Link>
+                </div>
+                {/*<div className="itens-p">                    
                     <div className="item-p">
                         <div className="img-item-p">
                             <img src={item2}/>
@@ -52,7 +113,7 @@ const Blog = () => {
                             <button>Ver mais</button>
                         </span>
                     </div>
-                    <div className="item-p">
+                     <div className="item-p">
                         <div className="img-item-p">
                             <img src={item3}/>
                         </div>
@@ -68,7 +129,8 @@ const Blog = () => {
                             <Link to="/blog/processos-de-importacao"><button>Ver mais</button></Link>
                         </span>
                     </div>
-                </div>
+                    
+                </div>*/}
             </section>
 
         </article>

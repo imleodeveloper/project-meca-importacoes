@@ -12,6 +12,9 @@ import Especializacao from "./Pages/Menu-Solucoes/Especializacao";
 import Services from "./Pages/Menu-Solucoes/Services";
 import Blog from "./Pages/Blog";
 import Processos_De_Importacao from "./Pages/Menu-Blog/Processos_De_Importacao";
+import Inteligencia_Artificial from "./Pages/Menu-Blog/Inteligencia_Artificial";
+import Microcontroladores from "./Pages/Menu-Blog/Microcontroladores";
+import Componentes_Eletronicos from "./Pages/Menu-Blog/Componentes_Eletrônicos";
 /* PAGES */
 
 function AppRoutes(){
@@ -38,6 +41,9 @@ function AppRoutes(){
 
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/blog/processos-de-importacao" element={<Processos_De_Importacao />} />
+                    <Route path="/blog/inteligencia-artificial" element={<Inteligencia_Artificial />} />
+                    <Route path="/blog/microcontroladores" element={<Microcontroladores />} />
+                    <Route path="/blog/o-que-sao-componentes-eletronicos" element={<Componentes_Eletronicos />} />
 
                 {/* PAGES */}
 

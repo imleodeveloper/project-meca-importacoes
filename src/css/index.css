@@ -214,7 +214,7 @@ nav .nav-list .nav-item:hover::after{
     }
     .nav-list{
         position: absolute;
-        top: 4.5vh;
+        top: 0vh;
         right: 0;
         background-color: rgba(41, 41, 41, 0.99);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -1709,21 +1709,25 @@ nav .nav-list .nav-item:hover::after{
 .article-blog .section-blog .head-blog{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    
 }
 .article-blog .section-blog .head-blog h1{
     font-size: 2.5rem;
     color: #0059ff;
-    width: 75%;
+    width: 70%;
     height: auto;
+    display: flex;
+    justify-content: start;
+    padding-left: 30px;
 }
 .article-blog .section-blog .head-blog span{
-    width: 25%;
+    width: 30%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     gap: 25px;
+    padding-right: 30px;
 }
 .article-blog .section-blog .head-blog span a{
     width: 40px;
@@ -1784,7 +1788,7 @@ nav .nav-list .nav-item:hover::after{
 }
 
 .article-blog .section-blog .item-g{
-    width: 48%;
+    width: 49%;
     min-height: 700px;
     max-width: 700px;
     display: flex;
@@ -1839,7 +1843,7 @@ nav .nav-list .nav-item:hover::after{
 
 
 .article-blog .section-blog .itens-p{
-    width: 47%;
+    width: 50%;
     min-height: 700px;
     gap: 10px;
     display: flex;
@@ -1849,7 +1853,7 @@ nav .nav-list .nav-item:hover::after{
     border-right: 1px solid #0059ff;
 }
 .article-blog .section-blog .itens-p .item-p{
-    width: 50%;
+    width: 100%;
     height: 100%;
     padding: 0px 20px;
 }
@@ -1915,7 +1919,6 @@ nav .nav-list .nav-item:hover::after{
     cursor: pointer;
     overflow: hidden;
     font-weight: 900;
-    z-index: 100;
     animation: subirFrase 0.5s ease-out forwards;
 }
 .article-blog .section-blog .button-view-more button::before {
@@ -1944,11 +1947,41 @@ nav .nav-list .nav-item:hover::after{
     left: -300%;
 }
 
+@media (max-width: 1024px){
+    .article-blog .section-blog .head-blog{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+    .article-blog .section-blog .head-blog h1{
+        justify-content: center;
+        padding: 0px;
+        width: 90%;
+        text-align: center;
+    }
+    .article-blog .section-blog .head-blog span{
+        justify-content: center;
+        padding: 0px;
+    }
+    .article-blog .section-blog .head-blog span a{
+        width: 50px;
+        height: 50px;
+        font-size: 2.5rem;
+    }
+    .article-blog .section-blog .item-g{
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+    }
+}
+
 
 /****************** BLOG ÍNICIO **************************/
 
-/** PROCESSOS BLOG **/
-.processosBlog-article{
+/** TEMAS BLOG **/
+.themesBlog-article{
     width: 100%;
     height: auto;
     display: flex;
@@ -1959,15 +1992,46 @@ nav .nav-list .nav-item:hover::after{
     background: rgb(32,32,32);
     background: linear-gradient(90deg, rgba(32,32,32,1) 20%, rgba(37,37,37,1) 40%, rgba(53,53,53,1) 65%);
 }
-.processosBlog-article h1{
+.themesBlog-article h1{
     color: #0059ff;
     font-size: 2.5rem;
-    width: 100%;
+    width: 80%;
     text-align: center;
     height: auto;
 }
+.themesBlog-article span{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.themesBlog-article span .link-blog{
+    color: #e1e1e1;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+.themesBlog-article span .link-blog::after{
+    width: 10px;
+    background: #0059ff;
+    height: 2px;
+    position: absolute;
+    content: ' ';
+    bottom: -5px;
+    left: 0px;
+    transition: 0.3s ease-in-out;
+}
+.themesBlog-article span .link-blog:hover{
+    color: #0059ff;
+}
+.themesBlog-article span .link-blog:hover::after{
+    width: 100%;
+}
 
-.processosBlog-article section{
+.themesBlog-article section{
     width: 100%;
     height: auto;
     display: flex;
@@ -1976,29 +2040,29 @@ nav .nav-list .nav-item:hover::after{
     padding-top: 100px;
     flex-direction: column;
 }
-.processosBlog-article section .img-processos{
+.themesBlog-article section .img-themes{
     width: 80%;
     height: 500px;
     overflow: hidden;
 
 }
-.processosBlog-article section .img-processos img{
+.themesBlog-article section .img-themes img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: 0.3s ease-in-out;
 
 }
-.processosBlog-article section .img-processos img:hover{
+.themesBlog-article section .img-themes img:hover{
     transform: scale(1.1);
 }
-.processosBlog-article section p{
+.themesBlog-article section p{
     width: 80%;
     height: auto;
     padding-top: 50px;
     color: #fff;
 }
-.processosBlog-article section div{
+.themesBlog-article section div{
     width: 80%;
     height: auto;
     display: flex;
@@ -2007,23 +2071,77 @@ nav .nav-list .nav-item:hover::after{
     align-items: start;
     padding-bottom: 50px;
 }
-.processosBlog-article section div h2{
+.themesBlog-article section div h2{
     width: 100%;    
     height: auto;
     color: #0059ff;
 }
-.processosBlog-article section div p{
+.themesBlog-article section div h3{
+    width: 100%;
+    height: auto;
+    color: #0077B5;
+    padding-top: 20px;
+    font-size: 1.5rem;
+}
+.themesBlog-article section div p{
     padding: unset;
     color: #fff;
     font-size: 1rem;
     width: 100%;
 }
-.processosBlog-article section div ul{
+.themesBlog-article section div ul{
     width: 100%;
     height: auto;
     color: #fff;
 }
-/** PROCESSOS BLOG **/
+.themesBlog-article section div span{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+.themesBlog-article section div span .title-share{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 0px;
+}
+.themesBlog-article section div span .title-share h2{
+    font-size: 1.2rem;
+    color: #fff;
+    width: auto;
+    height: auto;
+}
+.themesBlog-article section div span .links-share{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.themesBlog-article section div span .links-share a{
+    width: 35px;
+    height: 35px;
+    border: 1px solid #0059ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.themesBlog-article section div span .links-share a:hover{
+    background: #0059ff;
+    border: 1px solid #fff;
+    color: #e1e1e1;
+}
+/** themes BLOG **/
 
 
 
