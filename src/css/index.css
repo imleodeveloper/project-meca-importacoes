@@ -49,32 +49,37 @@ header{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: background-color 0.8s ease;
 }
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 .div-logo-nav{
     width: 20%;
-    height: auto;
+    height: 100%;
     overflow: hidden;
     
 }
 .navbar-logo{
     width: 50%;
-    height: auto;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    overflow: hidden;
 }
 .navbar-logo img{
-    width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
 
 }
 
-nav{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
+
 .nav-list{
     width: 60%;
     list-style: none;
@@ -89,11 +94,12 @@ nav{
     margin-left: 4rem;
     position: relative;
 }
-.navbar .nav-list .nav-item:hover{
+
+nav .nav-list .nav-item:hover{
     color: #0059ff;
 }
 
-.navbar .nav-list .nav-item::after{
+nav .nav-list .nav-item::after{
     content: " ";
     width: 8px;
     height: 2px;
@@ -104,7 +110,7 @@ nav{
     transition: width 0.3s ease ;
 }
 
-.navbar .nav-list .nav-item:hover::after{
+nav .nav-list .nav-item:hover::after{
     width: 65%;
 }
 /* Estilo inicial do dropdown escondido */
@@ -199,6 +205,8 @@ nav{
     }
     nav{
         width: 100%;
+        justify-content: space-between;
+        padding: 0px 20px;
     }
     .mobile-menu{
         display: block;
@@ -932,10 +940,10 @@ nav{
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 1; /* Garante que o overlay esteja abaixo dos textos */
+    z-index: 1;
     background: 
         radial-gradient(circle, rgba(0, 0, 0, 0.2) 1%, rgba(0, 0, 0, 0.8) 100%),
-        url('../img/Empresa/Sobre/img-sobrenos.jpg') no-repeat center center;
+        url('../img/Empresa/Sobre/img-sobrenos.webp') no-repeat center center;
     background-size: cover;
     filter: grayscale(30%); /* Deixa a imagem preto e branco */
     opacity: 0.45; /* Escurece a imagem para maior contraste */
@@ -1293,7 +1301,7 @@ nav{
     align-items: center;
     background: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-        url('../img/Contato/background-contato.jpg') no-repeat center center;
+        url('../img/Contato/background-contato.webp') no-repeat center center;
     background-size: cover; /* Ajusta o tamanho para cobrir a área */
     background-repeat: no-repeat; /* Evita repetições */
     background-position: center; /* Centraliza o GIF */
@@ -1698,13 +1706,60 @@ nav{
     flex-direction: column;
     
 }
-.article-blog h1{
+.article-blog .section-blog .head-blog{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.article-blog .section-blog .head-blog h1{
     font-size: 2.5rem;
     color: #0059ff;
-    width: 100%;
+    width: 75%;
     height: auto;
-    padding: 30px 0px 0px 30px;
-    
+}
+.article-blog .section-blog .head-blog span{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.article-blog .section-blog .head-blog span a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 2rem;
+    color: #e1e1e1;
+    transition: 0.3s ease-in-out;
+    border-radius: 10px;
+}
+.article-blog .section-blog .head-blog span a::after{
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #0059ff;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.article-blog .section-blog .head-blog span a:nth-child(1):hover{
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    border-radius: 50%;
+}
+.article-blog .section-blog .head-blog span a:nth-child(2):hover{
+    background: #0077B5;
+    border-radius: 50%;
+}
+.article-blog .section-blog .head-blog span a:hover::after{
+    opacity: 1;
 }
 .article-blog .section-blog{
     width: 100%;
@@ -1910,52 +1965,6 @@ nav{
     width: 100%;
     text-align: center;
     height: auto;
-}
-.processosBlog-article .social-blog{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.processosBlog-article .social-blog span{
-    color: #fff;
-    font-size: 1.5rem;
-}
-.processosBlog-article .social-blog ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.processosBlog-article .social-blog ul li{
-    font-size: 1.5rem;
-    color: #fff;
-    list-style: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #0059ff;
-    cursor: pointer;
-}
-.processosBlog-article .social-blog ul li a{
-    text-decoration: none;
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-.processosBlog-article .social-blog ul li:nth-child(1) a:hover{
-    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
-}
-.processosBlog-article .social-blog ul li:nth-child(2) a:hover{
-    background: #0077B5;
 }
 
 .processosBlog-article section{
@@ -2224,7 +2233,7 @@ nav{
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../img/Especialização/especializacao-section-main.jpg');
+    background: url('../img/Especialização/especializacao-section-main.webp');
     background-size: cover;
     background-position: center;
     opacity: 0.5;
@@ -2328,7 +2337,7 @@ nav{
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../img/Especialização/background-services-main.jpg');
+    background: url('../img/Especialização/background-services-main.webp');
     background-size: cover;
     background-position: center;
     opacity: 0.5;
@@ -2540,6 +2549,12 @@ footer{
 .link-instagram{
     border-radius: 50%;
     background: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(204, 223, 231);
 }
 .link-instagram:hover{
     background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
@@ -2547,6 +2562,12 @@ footer{
 .link-linkedin{
     border-radius: 50%;
     background: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(204, 223, 231);
 }
 .link-linkedin:hover{
     background: #0077B5;
@@ -2561,7 +2582,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(204, 223, 231);
+
 }
 
 .footer-section:nth-child(2) .link-footer{
@@ -2880,7 +2901,7 @@ html {
             gap: 40px;
             top: 0vh;
             height: 100vh;
-            padding-top: 7rem;
+            padding-top: 3rem;
         }
         .div-logo-nav{
             width: 55%;
@@ -2889,6 +2910,11 @@ html {
         }
         .navbar-logo{
             width: 100%;
+        }
+        .navbar-logo img{
+            width: 200px;
+            height: 200px;
+        
         }
         /* NAVBAR */  
 
@@ -3229,7 +3255,7 @@ html {
         /* NAVBAR */
         .nav-list{
             width: 80vw;
-            gap: 100px;
+            gap: 50px;
         }
         /* NAVBAR */
 
@@ -4113,8 +4139,8 @@ html {
     @media (min-width: 1024px) {  
         /*HEADER */
         .nav-list{
-            padding-top: 100px;
-            gap: 100px;
+            padding-top: 50px;
+            gap: 70px;
         }
         /*HEADER */
 
@@ -4370,11 +4396,6 @@ html {
             justify-content: end;
             align-items: center;
         }
-        .navbar-logo img{
-            width: 70%;
-            height: auto;
-            object-fit: cover;
-        }
 
         .nav-item {
             margin: 0 1rem;
@@ -4525,8 +4546,7 @@ html {
             max-width: 600px;
             padding-top: 15px;
         }
-        .section-contato-info2{
-        }
+
         .section-contato-info2 .p-contato{
             width: 90%;
         }

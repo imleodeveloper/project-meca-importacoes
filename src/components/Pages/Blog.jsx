@@ -1,6 +1,6 @@
-import item1 from "../../img/blog/processos-de-importacao.jpg";
-import item2 from "../../img/blog/importacao-de-componentes.jpg";
-import item3 from "../../img/blog/o-que-sao-componentes.jpg";
+import item1 from "../../img/blog/processos-de-importacao.webp";
+import item2 from "../../img/blog/importacao-de-componentes.webp";
+import item3 from "../../img/blog/o-que-sao-componentes.webp";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
@@ -8,7 +8,13 @@ const Blog = () => {
         <article className="article-blog">
 
             <section className="section-blog">
-                <h1>Para você ficar por dentro</h1>
+                <div className="head-blog">
+                    <h1>Para você ficar por dentro</h1>
+                    <span>
+                        <a href="https://www.instagram.com/meca_importacoes/"><i className="mdi mdi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/meca-importações-6137a7346/"><i className="mdi mdi-linkedin"></i></a>
+                    </span>
+                </div>
                 <div className="item-g">
                     <Link to="/blog/processos-de-importacao" className="link-blog">
                         <div className="img-item-g">

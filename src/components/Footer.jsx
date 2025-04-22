@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import LogoMeca from '../img/Logo Header/Logo branci vetorizado PNG.png';
+import LogoMeca from '/Logo-Horizontal.webp';
 
 function Footer(){
     return(
@@ -7,23 +7,26 @@ function Footer(){
             <div className="footer-columns">
                 <div className="footer-column">
                     <div className="footer-section">
-                    <span className="title-footer-section">Navegação</span>
+                        <span className="title-footer-section">Navegação</span>
                         <ul className="navigation-footer-section">
-                            <Link to="/" className='link-item-footer'>
-                                <li className="item-navigation-footer">Home</li>
-                            </Link>
-                            <Link to="/empresa/sobre-nos" className='link-item-footer'>
-                                <li className="item-navigation-footer">Sobre Nós</li>
-                            </Link>
-                            <Link to="/solucoes/especializacao" className='link-item-footer'>
-                                <li className="item-navigation-footer">Especialização</li>
-                            </Link>
-                            <Link to="/solucoes/servicos" className='link-item-footer'>
-                                <li className="item-navigation-footer">Serviços</li>
-                            </Link>
-                            <Link to="/contato" className='link-item-footer'>
-                                <li className="item-navigation-footer">Entre em contato</li>
-                            </Link>
+                            <li className="item-navigation-footer">
+                                <Link to="/" className="link-item-footer">Home</Link>
+                            </li>
+                            <li className="item-navigation-footer">
+                                <Link to="/empresa/sobre-nos" className="link-item-footer">Sobre nós</Link>
+                            </li>
+                            <li className="item-navigation-footer">
+                                <Link to="/solucoes/especializacao" className="link-item-footer">Especialização</Link>
+                            </li>
+                            <li className="item-navigation-footer">
+                                <Link to="/solucoes/servicos" className="link-item-footer">Serviços</Link>
+                            </li>
+                            <li className="item-navigation-footer">
+                                <Link to="/contato" className="link-item-footer">Entre em contato</Link>
+                            </li>
+                            <li className="item-navigation-footer">
+                                <Link to="/blog" className="link-item-footer">Nosso blog</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -32,33 +35,56 @@ function Footer(){
                     <div className="footer-section" id='social-id-footer'>                
                         <span className="title-footer-section">SIGA NOSSAS REDES SOCIAIS!</span>
                         <ul className="footer-social">
-                            <a 
+                            <li className="footer-social-item">
+                                <a 
                                 href="https://www.instagram.com/meca_importacoes/"
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 className="link-instagram"
-                            >
-                                <li className="footer-social-item">
-                                    <i className="mdi mdi-instagram"></i>
-                                </li>
-                            </a>
-                            <a 
-                                href="https://www.linkedin.com/company/meca-importa%C3%A7%C3%B5es/about/?viewAsMember=true" 
+                                >
+                                <i className="mdi mdi-instagram"></i>
+                                </a>
+                            </li>
+                            <li className="footer-social-item">
+                                <a 
+                                href="https://www.linkedin.com/in/meca-importações-6137a7346/" 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 className="link-linkedin"
-                            >
-                                <li className="footer-social-item">
-                                    <i className="mdi mdi-linkedin"></i>
-                                </li>
-                            </a>
+                                >
+                                <i className="mdi mdi-linkedin"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div> 
                     <div className="footer-section" id="contact-id-footer">
                         <span className="title-footer-section">CONTATE-NOS</span>
-                        <i className="mdi mdi-whatsapp icon-link-footer"><i className="mdi mdi-phone-in-talk-outline icon-link-footer"><a href="https://wa.me/5511970718680" target='_blank' rel='noopener noreferrer' className="link-footer"> +55 (11) 97071-8680</a></i></i>                          
-                        <i className="mdi mdi-email icon-link-footer"><a href="mailto:contato@mecaimportacoes.com.br" target='_blank' rel='noopener noreferrer' className="link-footer"> contato@mecaimportacoes.com.br</a></i>                        
-                    </div>    
+
+                        <div className="footer-contact-item">
+                            <i className="mdi mdi-whatsapp icon-link-footer"></i>
+                            <i className="mdi mdi-phone-in-talk-outline icon-link-footer"></i>
+                            <a
+                            href="https://wa.me/5511970718680"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link-footer"
+                            >
+                            +55 (11) 97071-8680
+                            </a>
+                        </div>
+
+                        <div className="footer-contact-item">
+                            <i className="mdi mdi-email icon-link-footer"></i>
+                            <a
+                            href="mailto:contato@mecaimportacoes.com.br"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link-footer"
+                            >
+                            contato@mecaimportacoes.com.br
+                            </a>
+                        </div>
+                    </div>  
                 </div>
                 <div className="footer-column">
                     <div className='footer-section'>                      

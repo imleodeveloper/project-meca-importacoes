@@ -2,7 +2,7 @@
 import { Link , useLocation } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/index.css';
-import LogoHeader2 from '../img/Logo Header/Logo-Deitado.png'
+import LogoHeader2 from '/Logo-Deitado.webp';
 import { useState } from "react";
 
 
@@ -24,7 +24,7 @@ function Header(){
 
     return(
         <header>
-            <nav className="navbar">
+            <nav>
                 {/* LOGO DO MENU*/}
                 <div className="div-logo-nav">               
                     <Link className="navbar-logo" to="/">

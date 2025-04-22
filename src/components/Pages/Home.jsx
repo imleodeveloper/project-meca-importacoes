@@ -13,10 +13,10 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/effect-creative';
 
-import imgSlider1 from '../../img/Home/1738013790877.jpg';
-import imgSlider3 from '../../img/Home/background-home-services.jpg';
-import imgSlider4 from '../../img/Home/img-slider4-subs2.jpg';
-import imgSlider2Subs from '../../img/Home/wmremove-transformed.jpeg';
+import imgSlider1 from '../../img/Home/1738013790877.webp';
+import imgSlider3 from '../../img/Home/background-home-services.webp';
+import imgSlider4 from '../../img/Home/img-slider4-subs2.webp';
+import imgSlider2Subs from '../../img/Home/wmremove-transformed.webp';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';

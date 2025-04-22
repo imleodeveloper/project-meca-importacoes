@@ -4,28 +4,6 @@ const Processos_De_Importacao = () => {
     return(
         <article className="processosBlog-article">
             <h1>Processos de Importação: Entenda as Etapas e Requisitos</h1>
-            <span className="social-blog">
-                <span>Nos siga:</span>
-                <ul>
-                    
-                    <li>
-                        <a
-                            href="https://www.instagram.com/meca_importacoes/"
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                        >
-                            <i className="mdi mdi-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.linkedin.com/company/meca-importa%C3%A7%C3%B5es/about/?viewAsMember=true" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                        >
-                            <i className="mdi mdi-linkedin"></i></a>
-                    </li>
-                </ul>
-            </span>
             <section>
                 <div className="img-processos">
                     <img src={img}/>
