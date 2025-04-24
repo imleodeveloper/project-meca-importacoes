@@ -121,7 +121,7 @@ function Footer(){
             <div className='waterMarker-VierCaTech'>
                 <p>Desenvolvido por 
                     <a href='https://www.viercatech.com.br' target='_blank' rel='noopener noreferrer' aria-label="Acesse o site da VierCa Tech - Desenvolvimento de sites e sistemas">
-                        <img src='/src/img/Logo Header/VierCaTech-SemNome-Fundo.svg' alt='VierCa Tech' title='VierCa Tech - Desenvolvimento de sites e sistemas'></img>
+                        <img src='/src/img/Logo Header/VierCaTech-SemNome-Fundo.webp' alt='VierCa Tech' title='VierCa Tech - Desenvolvimento de sites e sistemas'></img>
                     </a>
                 </p>
             </div>
