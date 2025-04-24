@@ -1948,6 +1948,9 @@ nav .nav-list .nav-item:hover::after{
 }
 
 @media (max-width: 1024px){
+    .article-blog .section-blog{
+        padding: 50px 0px;
+    }
     .article-blog .section-blog .head-blog{
         flex-direction: column;
         justify-content: center;
@@ -1966,15 +1969,18 @@ nav .nav-list .nav-item:hover::after{
         padding: 0px;
     }
     .article-blog .section-blog .head-blog span a{
-        width: 50px;
-        height: 50px;
-        font-size: 2.5rem;
+        width: 35px;
+        height: 35px;
+        font-size: 2rem;
     }
     .article-blog .section-blog .item-g{
         width: 100%;
-        max-width: 800px;
         height: auto;
     }
+    .article-blog .section-blog .item-g h2{
+        font-size: 1.5rem;
+    }
+
 }
 
 
@@ -2140,6 +2146,21 @@ nav .nav-list .nav-item:hover::after{
     background: #0059ff;
     border: 1px solid #fff;
     color: #e1e1e1;
+}
+
+@media (max-width: 1024px){
+
+    .themesBlog-article h1{
+        font-size: 2rem;
+        width: 90%;
+    }
+
+    .themesBlog-article section .img-themes{
+        width: 80%;
+        height: 300px;
+        overflow: hidden;
+    
+    }
 }
 /** themes BLOG **/
 
@@ -2732,6 +2753,31 @@ footer{
 }
 .link-item-footer:hover{
     color: #0059ff;
+}
+
+footer .waterMarker-VierCaTech{
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #0059ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+footer .waterMarker-VierCaTech p{
+    color: rgb(204, 223, 231);
+    padding-top: 5px;
+    font-size: 1rem;
+
+}
+footer .waterMarker-VierCaTech p a{
+    width: 40px;
+    height: 40px;
+    padding-left: 5px;
+}
+footer .waterMarker-VierCaTech p a img{
+    width: 30px;
+    height: 30px;
 }
 /***************************** FOOTER FIM ************************************/
 
@@ -3358,6 +3404,10 @@ html {
         
         /***** PAGE SERVIÇOS *****/
         /********* SUB MENU SOLUÇÕES ***********/
+
+        /*PAGE BLOG*/
+
+        /*PAGE BLOG*/
 
 
         /********* PAGE FOOTER *********/

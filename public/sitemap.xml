@@ -49,4 +49,34 @@
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://www.mecaimportacoes.com.br/blog</loc>
+        <lastmod>2025-04-22T17:35:38+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.mecaimportacoes.com.br/blog/o-que-sao-componentes-eletronicos</loc>
+        <lastmod>2025-04-22T17:35:38+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.mecaimportacoes.com.br/blog/inteligencia-artificial</loc>
+        <lastmod>2025-04-22T17:35:38+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.mecaimportacoes.com.br/blog/microcontroladores</loc>
+        <lastmod>2025-04-22T17:35:38+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.mecaimportacoes.com.br/blog/processos-de-importacao</loc>
+        <lastmod>2025-04-22T17:35:38+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
 </urlset>
