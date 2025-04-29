@@ -1,9 +1,45 @@
 import { Link } from "react-router-dom";
 import img from "../../../img/blog/inteligencia-artificial.webp";
+import { Helmet } from "react-helmet";
 
 const Inteligencia_Artificial = () => {
     return(
         <article className="themesBlog-article">
+            <Helmet>
+                {/* JSON-LD para schema.org */}
+                <script type="application/ld+json">
+                {`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": "Inteligência Artificial: Como Ela Está Transformando a Indústria",
+                        "url": "https://www.mecaimportacoes.com.br/blog/inteligencia-artificial",
+                        "description": "Saiba como a inteligência artificial está impactando a indústria de componentes eletrônicos e criando novas oportunidades.",
+                        "datePublished": "2025-03-12",
+                        "dateModified": "2025-03-12",
+                        "author": {
+                            "@type": "Organization",
+                            "name": "Meca Importações"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Meca Importações",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.mecaimportacoes.com.br/Logo-Horizontal.webp"
+                            }
+                        }
+                    }
+                `}
+                </script>
+
+                {/* Metadados para SEO e redes sociais */}
+                <title>Inteligência Artificial | Meca Importações</title>
+                <meta property="og:title" content="Inteligência Artificial | Meca Importações" />
+                <meta property="og:description" content="Saiba como a inteligência artificial está impactando a indústria de componentes eletrônicos e criando novas oportunidades." />
+                <meta property="og:type" content="article" />
+                <meta property="og:url" content="https://www.mecaimportacoes.com.br/blog/inteligencia-artificial" />
+            </Helmet>
             <h1>Inteligência Artificial: O Futuro Já Começou</h1>
             <span>
                 <Link to="/blog" className="link-blog">Voltar ao blog</Link>

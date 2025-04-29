@@ -1,9 +1,45 @@
 import { Link } from "react-router-dom";
 import img from "../../../img/blog/o-que-sao-componentes.webp";
+import { Helmet } from "react-helmet";
 
 const Componentes_Eletronicos = () => {
     return(
         <article className="themesBlog-article">
+            <Helmet>
+                {/* JSON-LD para schema.org */}
+                <script type="application/ld+json">
+                {`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": "O que são Componentes Eletrônicos?",
+                        "url": "https://www.mecaimportacoes.com.br/blog/o-que-sao-componentes-eletronicos",
+                        "description": "Entenda o que são componentes eletrônicos, como funcionam e como escolher os melhores para seus projetos.",
+                        "datePublished": "2025-03-10",
+                        "dateModified": "2025-03-10",
+                        "author": {
+                            "@type": "Organization",
+                            "name": "Meca Importações"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Meca Importações",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.mecaimportacoes.com.br/Logo-Horizontal.webp"
+                            }
+                        }
+                    }
+                `}
+                </script>
+
+                {/* Metadados para SEO e redes sociais */}
+                <title>O que são Componentes Eletrônicos | Meca Importações</title>
+                <meta property="og:title" content="O que são Componentes Eletrônicos | Meca Importações" />
+                <meta property="og:description" content="Entenda o que são componentes eletrônicos, como funcionam e como escolher os melhores para seus projetos." />
+                <meta property="og:type" content="article" />
+                <meta property="og:url" content="https://www.mecaimportacoes.com.br/blog/o-que-sao-componentes-eletronicos" />
+            </Helmet>
             <h1>O Que São Componentes Eletrônicos?</h1>
             <span>
                 <Link to="/blog" className="link-blog">Voltar ao blog</Link>

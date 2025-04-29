@@ -1,9 +1,45 @@
 import { Link } from "react-router-dom";
 import img from "../../../img/blog/microcontroladores.webp";
+import { Helmet } from "react-helmet";
 
 const Microcontroladores = () => {
     return(
         <article className="themesBlog-article">
+            <Helmet>
+                {/* JSON-LD para schema.org */}
+                <script type="application/ld+json">
+                {`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "headline": "Microcontroladores: A Base de Sistemas Eletrônicos Modernos",
+                        "url": "https://www.mecaimportacoes.com.br/blog/microcontroladores",
+                        "description": "Descubra o que são microcontroladores, como funcionam e qual a sua importância nos sistemas eletrônicos.",
+                        "datePublished": "2025-03-14",
+                        "dateModified": "2025-03-14",
+                        "author": {
+                            "@type": "Organization",
+                            "name": "Meca Importações"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Meca Importações",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://www.mecaimportacoes.com.br/Logo-Horizontal.webp"
+                            }
+                        }
+                    }
+                `}
+                </script>
+
+                {/* Metadados para SEO e redes sociais */}
+                <title>Microcontroladores | Meca Importações</title>
+                <meta property="og:title" content="Microcontroladores | Meca Importações" />
+                <meta property="og:description" content="Descubra o que são microcontroladores, como funcionam e qual a sua importância nos sistemas eletrônicos." />
+                <meta property="og:type" content="article" />
+                <meta property="og:url" content="https://www.mecaimportacoes.com.br/blog/microcontroladores" />
+            </Helmet>
             <h1>Microcontroladores: A Inteligência por Trás da Internet das Coisas (IoT)</h1>
             <span>
                 <Link to="/blog" className="link-blog">Voltar ao blog</Link>
