@@ -3526,6 +3526,9 @@ html {
         .footer-column{
             width: 100%;
         }
+        footer .waterMarker-VierCaTech{
+            width: 70%;
+        }
         /********* PAGE FOOTER *********/
     }
     @media(min-width:360px){
