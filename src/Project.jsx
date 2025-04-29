@@ -9,6 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Whatsapp from './components/Whatsapp';
 import ScrollToTop from './components/ScrollToTop';
 import LoadingScreen from './UI/LoadingScreen';
+import AlertDay from './components/AlertDay';
 
 
 function Project(){
@@ -41,6 +42,7 @@ function Project(){
                     <main>
                         <AppRoutes />
                     </main>
+                    <AlertDay />
                     <CookieBanner />
                     <Whatsapp />
                     <Footer />

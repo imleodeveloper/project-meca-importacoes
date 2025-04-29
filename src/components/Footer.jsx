@@ -120,7 +120,7 @@ function Footer(){
 
             </div>
             <div className='waterMarker-VierCaTech'>
-                <p>Desenvolvido por 
+                <p>Developed by VierCa Tech
                     <a href='https://www.viercatech.com.br' target='_blank' rel='noopener noreferrer' aria-label="Acesse o site da VierCa Tech - Desenvolvimento de sites e sistemas">
                         <img src={LogoVierCa} alt='VierCa Tech' title='VierCa Tech - Desenvolvimento de sites e sistemas'></img>
                     </a>
