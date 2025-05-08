@@ -42,7 +42,6 @@ function Project(){
                     <main>
                         <AppRoutes />
                     </main>
-                    <AlertDay />
                     <CookieBanner />
                     <Whatsapp />
                     <Footer />
